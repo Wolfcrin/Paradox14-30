@@ -1,0 +1,1595 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Inventario</name>
+    <events>
+        <variable constant="1" name="NUMERO_INTERFAZ" sid="7386871187708257" static="0" type="number">4</variable>
+        <comment>variable de uso del inventario</comment>
+        <variable constant="0" name="numerocasillalibre" sid="2982390814712497" static="0" type="number">0</variable>
+        <variable constant="0" name="casilla1Libre" sid="7039191916561603" static="0" type="text">si</variable>
+        <variable constant="0" name="casilla2Libre" sid="4488496862201645" static="0" type="text">si</variable>
+        <variable constant="0" name="casilla3Libre" sid="6902875799481475" static="0" type="text">si</variable>
+        <variable constant="0" name="casilla4Libre" sid="5432687233898617" static="0" type="text">si</variable>
+        <variable constant="0" name="casilla5Libre" sid="8061443444881472" static="0" type="text">si</variable>
+        <variable constant="0" name="inventarioLLeno" sid="2569753727105739" static="0" type="text">no</variable>
+        <comment>ver para usar mas adelante</comment>
+        <variable constant="0" name="InventarioPegamento" sid="4575025613076988" static="0" type="text">no</variable>
+        <variable constant="0" name="inventarioLLaveInglesa" sid="6738579451473779" static="0" type="text">no</variable>
+        <variable constant="0" name="inventarioCableDeTension" sid="8085015918122059" static="0" type="text">no</variable>
+        <variable constant="0" name="inventarioCuadroDePeligro" sid="5503134120797392" static="0" type="text">no</variable>
+        <variable constant="0" name="inventarioCojin" sid="3750594303872414" static="0" type="text">no</variable>
+        <event-group collapsed="1" description='Entre estas funciones podemos encontrar a la mistica &quot;ponerEnInventario&quot; :) y la vasalla &quot;setCasillasLibre&quot;' sid="3198886015829925" title="ponerEnInventario-lvl1">
+            <sub-events>
+                <event-block sid="5088454840383278">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5176539501969739" type="Function">
+                            <param id="0" name="Name">&quot;ponerEnInventario&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8864886903594806">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1029949175911282" type="casillaInventario">
+                                    <param id="0" name="Instance variable">casilla</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">numerocasillalibre</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>En esta parte ponemos las objetos que queremos crear</comment>
+                                <event-block sid="437879217067557">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2887696024824031" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;llaveInglesa&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="6194473041060031" type="llaveInglesaIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9482203514261811" type="llaveInglesaIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9769464883434097" type="llaveInglesaIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9639197142347243" type="llaveInglesaIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3732756094663647" type="llaveInglesaIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9507577138341724" type="llaveInglesaIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="5018318141485815" type="llaveInglesaIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1036956689560962" type="llaveInglesaIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="8994339260449426" type="llaveInglesaIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="9650064684759106" type="llaveInglesaIcono" />
+                                        <action id="-9" name="Set value" sid="4760193627315039" type="System">
+                                            <param id="0" name="Variable">Lvl1_yaAgarreLlave</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7911109680892682">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2013765233485343" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;cableDoble&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="1266190609052954" type="cableDobleIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5781510292070602" type="cableDobleIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="215339918243735" type="cableDobleIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3710859243274076" type="cableDobleIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.Y</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="8732354069807439" type="cableDobleIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4954928665090381" type="cableDobleIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1435131498793636" type="cableDobleIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2554423703428296" type="cableDobleIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="5288616102588525" type="cableDobleIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="5807105905233123" type="cableDobleIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9173416380950351">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2115691347248394" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SuperPC1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="6180103374384058" type="SuperPC1Icono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3711516094246031" type="SuperPC1Icono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7724102562679081" type="SuperPC1Icono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1953290703797612" type="SuperPC1Icono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.Y</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="31792260446631" type="SuperPC1Icono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6091426785465215" type="SuperPC1Icono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9239111714705292" type="SuperPC1Icono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8421007855522917" type="SuperPC1Icono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="2868964206497832" type="SuperPC1Icono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="8952400636832459" type="SuperPC1Icono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2721797882276">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="1121852469113507" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SuperPC2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="7935756124937203" type="SuperPC2Icono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9385586169521922" type="SuperPC2Icono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4138439900917291" type="SuperPC2Icono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8876058815729203" type="SuperPC2Icono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.Y</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="1011081348940337" type="SuperPC2Icono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8369449141690218" type="SuperPC2Icono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3801496790302353" type="SuperPC2Icono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2224963007389993" type="SuperPC2Icono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="4706597162174372" type="SuperPC2Icono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="3290373978705853" type="SuperPC2Icono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9883707652537747">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="3090143801514331" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SuperPC3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="5666375408767092" type="SuperPC3Icono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7153228628256386" type="SuperPC3Icono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6942908175268994" type="SuperPC3Icono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9408163643957969" type="SuperPC3Icono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.Y</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="9300239570588249" type="SuperPC3Icono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2924661347100182" type="SuperPC3Icono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1524696377164021" type="SuperPC3Icono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7345580230053858" type="SuperPC3Icono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="9318140121726239" type="SuperPC3Icono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="4259048408001157" type="SuperPC3Icono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1801086536826216">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2452419848585176" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;controlAscensor&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="9990863148411002" type="controlAscensorIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5489209506187873" type="controlAscensorIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3882756418890932" type="controlAscensorIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8503635941692621" type="controlAscensorIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.Y</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="5982073260353033" type="controlAscensorIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4613195774291012" type="controlAscensorIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5618388255315338" type="controlAscensorIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7782532184339977" type="controlAscensorIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="7204162412723525" type="controlAscensorIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="9812857266491608" type="controlAscensorIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4842302019533874">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="9784106665961678" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;cuadroDePeligro&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="2619894978535949" type="casillaInventario">
+                                            <param id="0" name="Object">cuadroDePeligroIcono</param>
+                                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="9265381561134223" type="cuadroDePeligroIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3718109763403524" type="cuadroDePeligroIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2302480064580308" type="cuadroDePeligroIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.x</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1543722436242823" type="cuadroDePeligroIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3190007874728798" type="cuadroDePeligroIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8923978069424587" type="cuadroDePeligroIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1413622894233235" type="cuadroDePeligroIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="5360377972085504" type="cuadroDePeligroIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8904393291922546" type="cuadroDePeligroIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="720362469548122" type="cuadroDePeligroIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="9450763036170187" type="cuadroDePeligroIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5809783062921918">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="4682257536431968" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;cojin&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="8308173310272333" type="casillaInventario">
+                                            <param id="0" name="Object">cojinIcono</param>
+                                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action disabled="1" id="-4" name="Set position to another object" sid="9157796932843881" type="cojinIcono">
+                                            <param id="0" name="Object">casillaInventario</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="7327679934573213" type="cojinIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9631859665603622" type="cojinIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8699627067929048" type="cojinIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3532175168543095" type="cojinIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="6859294611799527" type="cojinIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3010218383789256" type="cojinIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5534264945952738" type="cojinIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7308948932068766" type="cojinIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="9047743393470826" type="cojinIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="5301598539449744" type="cojinIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8024266780961176">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="4770438213006342" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;valvula&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="5897216909605427" type="casillaInventario">
+                                            <param id="0" name="Object">valvulaIcono</param>
+                                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="1763217579426783" type="valvulaIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8517841790960113" type="valvulaIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3335890145738917" type="valvulaIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9377192538686174" type="valvulaIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1626771817866098" type="valvulaIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4078164769796441" type="valvulaIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="2084395829235765" type="valvulaIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7894088264895427" type="valvulaIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="921196299292324" type="valvulaIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="4156035117895723" type="valvulaIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5754567132337202">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="8655527399993299" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;estufa&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="1096316178912919" type="casillaInventario">
+                                            <param id="0" name="Object">estufaIcono</param>
+                                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="5641700956895474" type="estufaIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9545920095653714" type="estufaIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8627067709733455" type="estufaIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4304141854207937" type="estufaIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9354319615991013" type="estufaIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1130028114293509" type="estufaIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="7158070215010665" type="estufaIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8846254061083306" type="estufaIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="257351318324678" type="estufaIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="8016809581732059" type="estufaIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4119594373052657">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2350765257989281" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;palanca&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="7914009680756172" type="casillaInventario">
+                                            <param id="0" name="Object">palancaIcono</param>
+                                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="3784623383269678" type="palancaIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3433920544666028" type="palancaIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9712720691549433" type="palancaIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9930257937492633" type="palancaIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1944551744905658" type="palancaIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="748019783976983" type="palancaIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="6482819135158355" type="palancaIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2914621594324451" type="palancaIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="9847998959171843" type="palancaIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="848193290334029" type="palancaIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9349351522058189">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="8501142740053847" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;martillo&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="5295928323717154" type="casillaInventario">
+                                            <param id="0" name="Object">martilloIcono</param>
+                                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="2175032910226058" type="martilloIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7888182081909508" type="martilloIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6170792512928702" type="martilloIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8515188114243145" type="martilloIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2105947074649148" type="martilloIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9903012887345273" type="martilloIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="1703432685123394" type="martilloIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1714587609936723" type="martilloIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="9734333194149078" type="martilloIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="9567740416190001" type="martilloIcono" />
+                                    </actions>
+                                </event-block>
+                                <comment>ANDA BIEN</comment>
+                                <event-block sid="8547206652627246">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7017626617626959" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4134464960993681" type="System">
+                                            <param id="0" name="Variable">casilla1Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="279062216004786">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6710343595024346" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="8818864032814189" type="System">
+                                            <param id="0" name="Variable">casilla2Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1400373776830901">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3063771850311077" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="414745395235806" type="System">
+                                            <param id="0" name="Variable">casilla3Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5540683567950446">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5141712125331654" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5910573997272879" type="System">
+                                            <param id="0" name="Variable">casilla4Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5711408258616256">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2787279850646484" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="7542725990258586" type="System">
+                                            <param id="0" name="Variable">casilla5Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Marcamos las casillas que se van liberando</comment>
+            </sub-events>
+        </event-group>
+        <event-group description="esta funciones son iguales que el grupo de arriba pero solo para los objetos del nivel 2" inactive="1" sid="8536585507440253" title="ponerEnInventario-lvl2">
+            <sub-events>
+                <event-block sid="5088454840383278">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5176539501969739" type="Function">
+                            <param id="0" name="Name">&quot;ponerEnInventario&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8864886903594806">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1029949175911282" type="casillaInventario">
+                                    <param id="0" name="Instance variable">casilla</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">numerocasillalibre</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>En esta parte ponemos las objetos que queremos crear</comment>
+                                <event-block sid="1192165216998315">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="8857383018749489" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pala&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="3682467273482532" type="palaIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4601437532748396" type="palaIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3223868181921171" type="palaIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8669572217888776" type="palaIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7402354468643505" type="palaIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6469937724567572" type="palaIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="9479544978413987" type="palaIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1179610635075466" type="palaIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="6097487688694747" type="palaIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="8481972050461121" type="palaIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="373915575924248">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="5470262066808088" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;tijera&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="5249621487917343" type="tijeraIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4095596137546132" type="tijeraIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9915617557454074" type="tijeraIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7511561515228217" type="tijeraIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9334825014271088" type="tijeraIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1535576722620099" type="tijeraIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="7837045663183608" type="tijeraIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2358776053044077" type="tijeraIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="3453865297996891" type="tijeraIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="2824260455237685" type="tijeraIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7472978522699534">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="3634334762515242" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;martillo&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="2605421313402951" type="martilloIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5464861149001788" type="martilloIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7039272613730466" type="martilloIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5989605186731075" type="martilloIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9760424862552158" type="martilloIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4877301795847049" type="martilloIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="1923204458666929" type="martilloIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3182877047572821" type="martilloIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="9582287823729045" type="martilloIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="2312936761101167" type="martilloIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3602058754763566">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="3574114313733956" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;ingredienteMiel&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="3190142286487594" type="mielIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7402036841862934" type="mielIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="605259001154536" type="mielIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7806805650161586" type="mielIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1174084155800217" type="mielIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6878161459198009" type="mielIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="4642899293932245" type="mielIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8227146660117235" type="mielIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="9501931183689167" type="mielIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="8434209170208104" type="mielIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3411695757488894">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="7621074687614773" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;ingredienteFlor&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="4899329412191107" type="florIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9881982562893275" type="florIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1042610614349924" type="florIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3595589416603693" type="florIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1634126383120117" type="florIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4378793068810292" type="florIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="8207908578436271" type="florIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9054675087595367" type="florIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="8189025305963129" type="florIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="1039280343066538" type="florIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="303516969717758">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="7750005915707557" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;ingredienteFrasco&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="6778009408837781" type="frascoIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8418331512320216" type="frascoIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8950823430513701" type="frascoIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8757163725556254" type="frascoIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6081949052390353" type="frascoIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5117947889253788" type="frascoIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="8237922145357302" type="frascoIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3049837415290784" type="frascoIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="1659619385511816" type="frascoIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="7232829619263982" type="frascoIcono" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9477361805467363">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="6679095403810995" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;ingredientePesticida&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="7153091951146714" type="pesticidaIcono">
+                                            <param id="0" name="X">casillaInventario.X</param>
+                                            <param id="1" name="Y">casillaInventario.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9388507060664976" type="pesticidaIcono">
+                                            <param id="0" name="Instance variable">NumeroCasilla</param>
+                                            <param id="1" name="Value">casillaInventario.casilla</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7166027638536" type="pesticidaIcono">
+                                            <param id="0" name="Instance variable">pos_X</param>
+                                            <param id="1" name="Value">casillaInventario.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="341752435574596" type="pesticidaIcono">
+                                            <param id="0" name="Instance variable">pos_Y</param>
+                                            <param id="1" name="Value">casillaInventario.y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8912437343670475" type="pesticidaIcono">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8692300738960811" type="pesticidaIcono">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="25274888459715" type="pesticidaIcono">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2305122912320978" type="pesticidaIcono">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="3103244526010613" type="pesticidaIcono">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="1460608674073795" type="pesticidaIcono" />
+                                    </actions>
+                                </event-block>
+                                <comment>ANDA BIEN</comment>
+                                <event-block sid="8547206652627246">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7017626617626959" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4134464960993681" type="System">
+                                            <param id="0" name="Variable">casilla1Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="279062216004786">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6710343595024346" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="8818864032814189" type="System">
+                                            <param id="0" name="Variable">casilla2Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1400373776830901">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3063771850311077" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="414745395235806" type="System">
+                                            <param id="0" name="Variable">casilla3Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5540683567950446">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5141712125331654" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5910573997272879" type="System">
+                                            <param id="0" name="Variable">casilla4Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5711408258616256">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2787279850646484" type="System">
+                                            <param id="0" name="Variable">numerocasillalibre</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="7542725990258586" type="System">
+                                            <param id="0" name="Variable">casilla5Libre</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2367717845216581" title="Con family">
+            <sub-events>
+                <comment>Cuando el personaje colisiona, con un objeto interactivo le habilita en dragDrop</comment>
+                <event-block sid="1420792287576343">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="284452281906097" type="interactivos">
+                            <param id="0" name="Object">personaje_14</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6946048065529344" type="interactivos">
+                            <param id="0" name="Instance variable">interactivo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="1262082407558084" type="interactivos">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7065441705378606" type="interactivos">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;Enabled&quot;</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="1970698349021994" type="interactivos">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">personaje_14</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Cuando se hace doble click en un objeto, que esta habilitado, se lo &quot;coloca en el inventario&quot;</comment>
+                <event-block any="1" sid="9026860395700167">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="9426713082417123" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">interactivos</param>
+                        </condition>
+                        <condition id="6" name="On object clicked" sid="7037677364121178" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">interactivos</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7888069982247657">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6842207539661115" type="System">
+                                    <param id="0" name="Variable">inventarioLLeno</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;no&quot;</param>
+                                </condition>
+                                <condition behavior="DragDrop2" id="3" name="Is enabled" sid="9504854727643344" type="interactivos" />
+                                <condition id="-17" name="Pick top/bottom" sid="6486454487705644" type="interactivos">
+                                    <param id="0" name="Which">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9562790990115291" type="interactivos">
+                                    <param id="0" name="Instance variable">interactivo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;si&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2773857150804901" type="Function">
+                                    <param id="0" name="Name">&quot;ponerEnInventario&quot;</param>
+                                    <param id="1" name="Parameter {n}">interactivos.nombreObjeto</param>
+                                </action>
+                                <action behavior="DragDrop2" id="0" name="Set enabled" sid="7059358165260318" type="interactivos">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2818068471320647" type="interactivos">
+                                    <param id="0" name="Instance variable">DragDropEnabled</param>
+                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="6379985984790601" type="interactivos">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9833038493972945" type="interactivos">
+                                    <param id="0" name="Instance variable">colisionEnabled</param>
+                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7381307075058483" type="interactivos">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3002146573082774" type="interactivos">
+                                    <param id="0" name="Instance variable">visible</param>
+                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2634065890673499" type="Function">
+                                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;poniendoEnInventario&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3276541496415774">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3145134082742258" type="System">
+                                    <param id="0" name="Variable">inventarioLLeno</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;si&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3762805254392095" type="Function">
+                                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;noEspacioEnInventario&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Cuando arrastramos el icono de los objetos&#x0D;&#x0A;crea el objeto respectivo en la posicion del mouse</comment>
+                <event-block sid="436305468765012">
+                    <conditions>
+                        <condition behavior="DragDrop2" id="2" name="On drop" sid="5864896910226034" type="icono_interactivo" />
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="7904018222741295" type="Mouse">
+                            <param id="0" name="Object">control_inventario</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7444133628850828" type="interactivos">
+                            <param id="0" name="Instance variable">nombreObjeto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">icono_interactivo.nombreObjeto</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8584490514360374" type="interactivos">
+                            <param id="0" name="Instance variable">interactivo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="4445334696465884" type="interactivos">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="8660660257871652" type="interactivos">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="244453577495427" type="interactivos">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="7197612205251707" type="interactivos">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9570569634511843" type="interactivos">
+                            <param id="0" name="Instance variable">colisionEnabled</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3875913170167457" type="interactivos">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5432398459216098" type="interactivos">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5307879649391191" type="Function">
+                            <param id="0" name="Name">&quot;setCasillaLibre&quot;</param>
+                            <param id="1" name="Parameter {n}">icono_interactivo.NumeroCasilla</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9938663190407759" type="icono_interactivo">
+                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2794215017578331" type="icono_interactivo">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7479138240304025" type="icono_interactivo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="7304521768243458" type="icono_interactivo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="6013321939893949" type="interactivos" />
+                        <action id="0" name="Call function" sid="8333150192125199" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;creandoInteractivo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Si seleccionamos el icono y lo soltamos dentro del inventario, va a la ultima posicion.</comment>
+                <event-block sid="1350671972390162">
+                    <conditions>
+                        <condition behavior="DragDrop2" id="2" name="On drop" sid="5929770736280114" type="icono_interactivo" />
+                        <condition id="7" name="Cursor is over object" sid="9542416064830109" type="Mouse">
+                            <param id="0" name="Object">control_inventario</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="2328787947197196" type="icono_interactivo">
+                            <param id="0" name="X">Self.pos_X</param>
+                            <param id="1" name="Y">Self.pos_Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2005962322047645">
+                    <conditions>
+                        <condition behavior="DragDrop2" id="0" name="Is dragging" sid="5566421893983618" type="interactivos" />
+                    </conditions>
+                    <actions>
+                        <action id="-29" name="Move to object" sid="284288296539321" type="interactivos">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">personaje_14</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="4077734179970817" title="chekeos">
+            <sub-events>
+                <comment>Marcamos las casillas que se van liberando</comment>
+                <event-block collapsed="1" sid="4191295619898066">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2506688997396469" type="Function">
+                            <param id="0" name="Name">&quot;setCasillaLibre&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7998826240007027">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="4106833847555102" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="911974448839933" type="System">
+                                    <param id="0" name="Variable">casilla1Libre</param>
+                                    <param id="1" name="Value">&quot;si&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5746954417955409" type="System">
+                                    <param id="0" name="Variable">numerocasillalibre</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7721833559924519">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="3420906986271209" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7030601135730031" type="System">
+                                    <param id="0" name="Variable">casilla2Libre</param>
+                                    <param id="1" name="Value">&quot;si&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1844028537997194" type="System">
+                                    <param id="0" name="Variable">numerocasillalibre</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9041666772222155">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="6910255757401087" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7103139548505759" type="System">
+                                    <param id="0" name="Variable">casilla3Libre</param>
+                                    <param id="1" name="Value">&quot;si&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7192501610980525" type="System">
+                                    <param id="0" name="Variable">numerocasillalibre</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1742309977287524">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="1979351352054986" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8914652787722351" type="System">
+                                    <param id="0" name="Variable">casilla4Libre</param>
+                                    <param id="1" name="Value">&quot;si&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4002360659031437" type="System">
+                                    <param id="0" name="Variable">numerocasillalibre</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="827157665149531">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="4083240513729258" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="103014227307745" type="System">
+                                    <param id="0" name="Variable">casilla5Libre</param>
+                                    <param id="1" name="Value">&quot;si&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7403790257242907" type="System">
+                                    <param id="0" name="Variable">numerocasillalibre</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Vemos cual es el numero de casilla, para desabilitarla</comment>
+                <event-block sid="9669396263311198">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9990765587171271" type="System">
+                            <param id="0" name="Variable">casilla1Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;no&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3502281651341746" type="System">
+                            <param id="0" name="Variable">casilla2Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;no&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1650422675950763" type="System">
+                            <param id="0" name="Variable">casilla3Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;no&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7903919668758608" type="System">
+                            <param id="0" name="Variable">casilla4Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;no&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9177750560376304" type="System">
+                            <param id="0" name="Variable">casilla5Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;no&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5890554830610575" type="System">
+                            <param id="0" name="Variable">inventarioLLeno</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>vemos cual de las casillas esta libre</comment>
+                <event-block sid="7075396926923197">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8384823788193803" type="System">
+                            <param id="0" name="Variable">casilla5Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7243269838480055" type="System">
+                            <param id="0" name="Variable">numerocasillalibre</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7622336786327918" type="System">
+                            <param id="0" name="Variable">inventarioLLeno</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7285315137201141">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3739358029751601" type="System">
+                            <param id="0" name="Variable">casilla4Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8151232338265511" type="System">
+                            <param id="0" name="Variable">numerocasillalibre</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9919848589021326" type="System">
+                            <param id="0" name="Variable">inventarioLLeno</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9233299654492544">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4989477676135869" type="System">
+                            <param id="0" name="Variable">casilla3Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1841087929584546" type="System">
+                            <param id="0" name="Variable">numerocasillalibre</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3515972224736989" type="System">
+                            <param id="0" name="Variable">inventarioLLeno</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5488009160851968">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3469375142057271" type="System">
+                            <param id="0" name="Variable">casilla2Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5735507860835474" type="System">
+                            <param id="0" name="Variable">numerocasillalibre</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9846547074025858" type="System">
+                            <param id="0" name="Variable">inventarioLLeno</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5966232106435167">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2176444419521001" type="System">
+                            <param id="0" name="Variable">casilla1Libre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="591430674330563" type="System">
+                            <param id="0" name="Variable">numerocasillalibre</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3900905456886966" type="System">
+                            <param id="0" name="Variable">inventarioLLeno</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6429109702035347" title="sonidos">
+            <sub-events>
+                <event-block sid="6852559320146151">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="1677993190859347" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">interactivos</param>
+                        </condition>
+                        <condition behavior="DragDrop2" id="3" inverted="1" name="Is enabled" sid="7647587422992487" type="interactivos" />
+                        <condition id="-9" name="Is visible" sid="8287974721936491" type="interactivos" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3831922249589324" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;objInteractivoSinDaD&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>panal</name>
+    <events>
+        <event-block any="1" sid="5669533778946576">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8289749839604611" type="tijera">
+                    <param id="0" name="Object">panal</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="9517127750383454" type="pala">
+                    <param id="0" name="Object">panal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="5633444667280253" type="ingredienteMiel">
+                    <param id="0" name="Object">panal</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="583677346777017" type="ingredienteMiel">
+                    <param id="0" name="Instance variable">DragDropEnabled</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action behavior="DragDrop2" id="0" name="Set enabled" sid="7035258530195415" type="ingredienteMiel">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4476262053987827" type="ingredienteMiel">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="9765947304820174" type="ingredienteMiel">
+                    <param id="0" name="Instance variable">visible</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="7432608172050213" type="ingredienteMiel">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="7591368404979877" type="ingredienteMiel">
+                    <param id="0" name="Instance variable">colisionEnabled</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="5" name="Set frame" sid="3864058379570496" type="panal">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

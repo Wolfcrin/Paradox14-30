@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>cristal de hielo</name>
+    <events>
+        <event-block sid="8590564639457183">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2231714512260076" type="estalacmitaDeHielo">
+                    <param id="0" name="Object">personaje_30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="5807224373796377" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6734161223511874">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5742421977074442" type="estalacmitaDeHielo">
+                    <param id="0" name="Object">personaje_14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="5799248680109715" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ14&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2851275203360322">
+            <conditions>
+                <condition id="-18" name="On created" sid="4174171054654036" type="estalacmitaDeHielo" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="9792267542291372" type="estalacmitaDeHielo">
+                    <param id="0" name="Frame number">floor(random(3))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

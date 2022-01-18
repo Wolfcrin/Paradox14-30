@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mueble</name>
+    <events>
+        <event-block sid="2450407530136217">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3598710526360984" type="mueble">
+                    <param id="0" name="Object">personaje_14</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="3987624459841352" type="mueble">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="6986229863200794" type="mueble">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Call function" sid="6755117182960036" type="Function">
+                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;romperCaja&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2461750525431842">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="3088573265001056" type="llaveInglesa">
+                            <param id="0" name="Object">mueble</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="8279841343037591" type="llaveInglesa">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="318584366444289" type="llaveInglesa">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6308718483088899" type="llaveInglesa">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1630471306502633" type="llaveInglesa">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3676740750206628">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="8069606984995298" type="pala">
+                            <param id="0" name="Object">mueble</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4589209466649223" type="pala">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="1896589200523709" type="pala">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="659286142558003" type="pala">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9924900062170614" type="pala">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="1606958799690394">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5615212647124646" type="System">
+                    <param id="0" name="Variable">Lvl1_yaAgarreLlave</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2530967465453853" type="System">
+                    <param id="0" name="Variable">Lvl1_yaAgarreLlave</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="-15" name="Set visible" sid="6137236068684968" type="llaveInglesa">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="DragDrop2" disabled="1" id="0" name="Set enabled" sid="939262745766864" type="llaveInglesa">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

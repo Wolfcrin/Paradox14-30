@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>brazoRobotico</name>
+    <events>
+        <event-block sid="8016282899265591">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="9814842756526326" type="colisionBrazoRobotico">
+                    <param id="0" name="Object">controlBrazoRobotico</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4024748557686225" type="controlBrazoRobotico">
+                    <param id="0" name="Instance variable">direccion</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;der&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9089949376630033" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irDerecha</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="3706159290828217" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irIzquierda</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="135960365268147" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irArriba</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="1167487942467235" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irAbajo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9369371768904521">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2330792862388484" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">cambiaDireccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="9330147099383645" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6486475215889955" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">aux</param>
+                            <param id="1" name="Value">self.direccion</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1799895290484131" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Value">self.dirDecambio</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4219774770186918" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">dirDecambio</param>
+                            <param id="1" name="Value">self.aux</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4605757263729817">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7098853083329534" type="controlBrazoRobotico">
+                    <param id="0" name="Instance variable">direccion</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;izq&quot;</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="3677395376756304" type="colisionBrazoRobotico">
+                    <param id="0" name="Object">controlBrazoRobotico</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="409143036759174" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irIzquierda</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="1413249476354033" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irDerecha</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7483873136955154" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irArriba</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="8453874571542134" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irAbajo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4622415941447868">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6411895834381603" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">cambiaDireccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="8582265298005397" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4058487834816316" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">aux</param>
+                            <param id="1" name="Value">self.direccion</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8881797589353748" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Value">self.dirDecambio</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8539570860036243" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">dirDecambio</param>
+                            <param id="1" name="Value">self.aux</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3704342645596322">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2940243274101497" type="controlBrazoRobotico">
+                    <param id="0" name="Instance variable">direccion</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;arr&quot;</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="1731915581346771" type="colisionBrazoRobotico">
+                    <param id="0" name="Object">controlBrazoRobotico</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="3770529370699648" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irArriba</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="8583850453163269" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irIzquierda</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="4376431376283615" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irDerecha</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="2947857246034195" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irAbajo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5431705518899482">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4455980061769902" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">cambiaDireccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="5404071256766668" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3818529813174082" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">aux</param>
+                            <param id="1" name="Value">self.direccion</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1548008743486001" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Value">self.dirDecambio</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="247427475487218" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">dirDecambio</param>
+                            <param id="1" name="Value">self.aux</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6971820246892094">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1055418349278876" type="controlBrazoRobotico">
+                    <param id="0" name="Instance variable">direccion</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;aba&quot;</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="1119458545065367" type="colisionBrazoRobotico">
+                    <param id="0" name="Object">controlBrazoRobotico</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="7014836364956622" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irAbajo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="8301355520545845" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irIzquierda</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="5633519698312425" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irArriba</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="1033765145982077" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irDerecha</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6924613972878196">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5901673961316394" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">cambiaDireccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="9987787679872622" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5085568619821911" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">aux</param>
+                            <param id="1" name="Value">self.direccion</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7790991229495852" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Value">self.dirDecambio</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9674538282947026" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">dirDecambio</param>
+                            <param id="1" name="Value">self.aux</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>control de movimientos</comment>
+        <event-block sid="8976171954865381">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9750088436869452" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irDerecha</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="2378824792284594" type="brazoRobotico">
+                    <param id="0" name="Angle">0</param>
+                    <param id="1" name="Distance">Self.velocidad</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1544063300106308">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5278768433289682" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irIzquierda</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="9789454575964366" type="brazoRobotico">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">Self.velocidad</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9436146085767651">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2353414790365139" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irArriba</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="5602546853817561" type="brazoRobotico">
+                    <param id="0" name="Angle">270</param>
+                    <param id="1" name="Distance">Self.velocidad</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7534402652043305">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3786072268824694" type="brazoRobotico">
+                    <param id="0" name="Instance variable">irAbajo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3663628614522398" type="brazoRobotico">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">Self.velocidad</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3962673955611182">
+            <conditions>
+                <condition id="-18" name="On created" sid="4370307836949193" type="brazoRobotico" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9300621825874969" type="brazoRobotico">
+                    <param id="0" name="Object">colisionBrazoRobotico</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="2264034248329584" type="colisionBrazoRobotico">
+                    <param id="0" name="Pin to">brazoRobotico</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="428827276386283">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="12378655041769" type="brazoRobotico">
+                    <param id="0" name="Instance variable">cambiarRuta</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="5238747239692297" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="1055111970396449" type="brazoRobotico">
+                    <param id="0" name="Instance variable">cambiarRuta</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="3313869046780421" type="SuperPC1">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1497075669809026" type="SuperPC1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="1990467382581386" type="Sprite9">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8335226093415224">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6890993817660127" type="brazoRobotico">
+                    <param id="0" name="Instance variable">cambiarRuta</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="4839233639737378" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="7508368133742341" type="brazoRobotico">
+                    <param id="0" name="Instance variable">cambiarRuta</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="230439009422388" type="SuperPC1">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5212534126674901" type="SuperPC1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="4268064239551585" type="Sprite9">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3621935696136067">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5914840777252033" type="colisionBrazoRobotico">
+                    <param id="0" name="Object">Sprite9</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4106495783231018" type="brazoRobotico">
+                    <param id="0" name="Instance variable">cambiarRuta</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5219024868993892">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5493866379077425" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="800334598914226" type="controlBrazoRobotico">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8388255518190212">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6945119352128393" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="3534304955949246" type="controlBrazoRobotico">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5246069908615084">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4468646863662368" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="3825766958090245" type="controlBrazoRobotico">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5830703821593366">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1214940909169957" type="colisionBrazoRobotico">
+                    <param id="0" name="Object">Sprite9</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5539019434826183" type="brazoRobotico">
+                    <param id="0" name="Instance variable">cambiarRuta</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3026838366907897">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3257758572161316" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="1807269718212067" type="controlBrazoRobotico">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3694515265134208">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5723207824886247" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="4738620320413224" type="controlBrazoRobotico">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4576114453078473">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="165506311244072" type="controlBrazoRobotico">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="85262821375077" type="controlBrazoRobotico">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

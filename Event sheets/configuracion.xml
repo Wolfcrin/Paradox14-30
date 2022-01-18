@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>configuracion</name>
+    <events>
+        <variable constant="0" name="Musica" sid="5504554923214702" static="0" type="number">1</variable>
+        <variable constant="0" name="Sonido" sid="8700014469830402" static="0" type="number">1</variable>
+        <event-group collapsed="1" description="es el contenedor de las configuraciones" sid="1430154143631749" title="fondo fecha">
+            <sub-events>
+                <comment>interfaz para el pasado</comment>
+                <event-block sid="774057881948171">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="6460276537016842" type="fondo_fecha2014" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="6501451290813519" type="fondo_fecha2014">
+                            <param id="0" name="Object">btn_mostrar_fecha</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="5772866647948019" type="btn_mostrar_fecha">
+                            <param id="0" name="Width">25</param>
+                            <param id="1" name="Height">25</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9354739406231922" type="btn_mostrar_fecha">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5045611489880796" type="fondo_fecha2014">
+                            <param id="0" name="Object">btn_ocultar_fecha</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="7315555260056572" type="btn_ocultar_fecha">
+                            <param id="0" name="Width">25</param>
+                            <param id="1" name="Height">25</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="4526880434342751" type="fondo_fecha2014">
+                            <param id="0" name="Object">btn_sonido</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="9333336287046108" type="fondo_fecha2014">
+                            <param id="0" name="Object">btn_musica</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1702044516130699" type="fondo_fecha2014">
+                            <param id="0" name="Object">btn_guardar</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">5</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7491184739495077" type="fondo_fecha2014">
+                            <param id="0" name="Object">btn_Cargar</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">6</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6420620381116079" type="fondo_fecha2014">
+                            <param id="0" name="Object">btn_menu</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Interfaz para el futuro</comment>
+                <event-block sid="7129128163257956">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="6452123911889052" type="fondo_fecha2030" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="483629390432809" type="fondo_fecha2030">
+                            <param id="0" name="Object">btn_mostrar_fecha</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="5931486828748485" type="btn_mostrar_fecha">
+                            <param id="0" name="Width">25</param>
+                            <param id="1" name="Height">25</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9519444768297136" type="btn_mostrar_fecha">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="4962054389804569" type="fondo_fecha2030">
+                            <param id="0" name="Object">btn_ocultar_fecha</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="5159470329146403" type="btn_ocultar_fecha">
+                            <param id="0" name="Width">25</param>
+                            <param id="1" name="Height">25</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6746353617686006" type="fondo_fecha2030">
+                            <param id="0" name="Object">btn_sonido</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2100838586975389" type="fondo_fecha2030">
+                            <param id="0" name="Object">btn_musica</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="9642472559025178" type="fondo_fecha2030">
+                            <param id="0" name="Object">btn_guardar</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">5</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="9570396853831689" type="fondo_fecha2030">
+                            <param id="0" name="Object">btn_Cargar</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">6</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5606879275614957" type="fondo_fecha2030">
+                            <param id="0" name="Object">btn_menu</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Invisible o no :)</comment>
+                <event-block any="1" sid="1131356527770137">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="8033379196420869" type="fondo_fecha2014" />
+                        <condition id="-9" name="Is visible" sid="4207732147867127" type="fondo_fecha2030" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2974483046461767" type="btn_sonido">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2529086428555181" type="btn_musica">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8348395112219177" type="btn_guardar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9035022251937784" type="btn_Cargar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5117359171711608" type="btn_menu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="7941505450844346">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="7392857447873955" type="fondo_fecha2014" />
+                        <condition id="-9" inverted="1" name="Is visible" sid="2300696288841008" type="fondo_fecha2030" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7399292819723841" type="btn_sonido">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8395011107222785" type="btn_musica">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5355542064163235" type="btn_guardar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6193599714558565" type="btn_Cargar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1081579569415456" type="btn_menu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="165669653723593" title="Sonido">
+            <sub-events>
+                <event-block collapsed="1" sid="3599053027239815">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="1821162596020342" type="btn_sonido" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9956075311081466">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8738554633445608" type="System">
+                                    <param id="0" name="Variable">Sonido</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="6584412117882317" type="btn_sonido">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="4707410903180766" type="btn_sonido">
+                                    <param id="0" name="Instance variable">sonido</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9979650171502753">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5493751917479269" type="System">
+                                    <param id="0" name="Variable">Sonido</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="3514806308072248" type="btn_sonido">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="2621483994198549" type="btn_sonido">
+                                    <param id="0" name="Instance variable">sonido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="754285651509756">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="6491345357785333" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_sonido</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="5697507757278109" type="btn_sonido" />
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="7783598292341801" type="btn_sonido">
+                            <param id="0" name="Instance variable">sonido</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6112408797881827" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268415114973884">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7788145464062485" type="btn_sonido">
+                            <param id="0" name="Instance variable">sonido</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7792621109511693" type="btn_sonido">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3496534216939222" type="System">
+                            <param id="0" name="Variable">Sonido</param>
+                            <param id="1" name="Value">btn_sonido.sonido</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="187982288490591">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5678756456635135" type="btn_sonido">
+                            <param id="0" name="Instance variable">sonido</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7957255331943402" type="btn_sonido">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1208329535113203" type="System">
+                            <param id="0" name="Variable">Sonido</param>
+                            <param id="1" name="Value">btn_sonido.sonido</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="5723219602652172" title="Musica">
+            <sub-events>
+                <event-block sid="2796651066713696">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="7967567227096715" type="btn_musica" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8513479712404424">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2847306325346103" type="System">
+                                    <param id="0" name="Variable">Musica</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="6490236237149962" type="btn_musica">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="5281689375869225" type="btn_musica">
+                                    <param id="0" name="Instance variable">musica</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5597391820429124">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2519780146191249" type="System">
+                                    <param id="0" name="Variable">Musica</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="2189514910111522" type="btn_musica">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3032677093409713" type="btn_musica">
+                                    <param id="0" name="Instance variable">musica</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="754285651509756">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="6491345357785333" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_musica</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="9660048700811448" type="btn_musica" />
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="7783598292341801" type="btn_musica">
+                            <param id="0" name="Instance variable">musica</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7758686487025874" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268415114973884">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7788145464062485" type="btn_musica">
+                            <param id="0" name="Instance variable">musica</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7792621109511693" type="btn_musica">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3496534216939222" type="System">
+                            <param id="0" name="Variable">Musica</param>
+                            <param id="1" name="Value">btn_musica.musica</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="187982288490591">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5623202958156146" type="btn_musica">
+                            <param id="0" name="Instance variable">musica</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7957255331943402" type="btn_musica">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9506008234997286" type="System">
+                            <param id="0" name="Variable">Musica</param>
+                            <param id="1" name="Value">btn_musica.musica</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="4791169228829294" title="guardar">
+            <sub-events>
+                <event-block sid="8799184317486632">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="9218926387821746" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_guardar</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="2042160934923537" type="btn_guardar" />
+                    </conditions>
+                    <actions>
+                        <action id="-36" name="Save" sid="1248694623637575" type="System">
+                            <param id="0" name="Slot">&quot;paradoxsave&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1905098635980232" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4090369176211755">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="6554980803462304" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_Cargar</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="6287260304837659" type="btn_Cargar" />
+                    </conditions>
+                    <actions>
+                        <action id="-37" name="Load" sid="9774009804801306" type="System">
+                            <param id="0" name="Slot">&quot;paradoxsave&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1603024082973543" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="8971793069688314" title="menu">
+            <sub-events>
+                <comment>carga desde cuando se fue al menu</comment>
+                <event-block sid="408857901303149">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="3630472438342615" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_menu</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="4989793726572385" type="btn_menu" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5178376867531074" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                        <action id="-36" name="Save" sid="5488692922518118" type="System">
+                            <param id="0" name="Slot">&quot;guardadoAntesMenu&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5005210919640661" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="2968160639183157" type="Audio" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="4319976512516146" title="ocultar_mostrar">
+            <sub-events>
+                <comment>oculta el cartel que dice 2030 o 2014</comment>
+                <event-block sid="2063384518350068">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="292146324725201" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_ocultar_fecha</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="9425097606221279" type="btn_ocultar_fecha" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2687384615977363" type="fondo_fecha2014">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4869184517191383" type="fondo_fecha2030">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8331645682621353" type="btn_ocultar_fecha">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7684934518448272" type="btn_mostrar_fecha">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Muestra el cartel que dice 2030 o 2014</comment>
+                <event-block sid="8850664092154744">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="955414319048418" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_mostrar_fecha</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="1457884118059196" type="btn_mostrar_fecha" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2032627187141336" type="fondo_fecha2014">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1015670137037152" type="fondo_fecha2030">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="71282718320652" type="btn_ocultar_fecha">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4393768753778269" type="btn_mostrar_fecha">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

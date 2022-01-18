@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>audio</name>
+    <events>
+        <event-group description="" sid="3291405475027566" title="sound">
+            <sub-events>
+                <event-block sid="4792877510296995">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5991339160913431" type="Function">
+                            <param id="0" name="Name">&quot;cargarSonido&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Preload" sid="3850762353651955" type="Audio">
+                            <param id="0" name="Audio file">ascensor</param>
+                        </action>
+                        <action id="4" name="Preload" sid="5151050645202949" type="Audio">
+                            <param id="0" name="Audio file">avispas</param>
+                        </action>
+                        <action id="4" name="Preload" sid="338051536366113" type="Audio">
+                            <param id="0" name="Audio file">soltandoObjeto</param>
+                        </action>
+                        <action id="4" name="Preload" sid="6363035066510199" type="Audio">
+                            <param id="0" name="Audio file">centinela</param>
+                        </action>
+                        <action id="4" name="Preload" sid="8107402106552654" type="Audio">
+                            <param id="0" name="Audio file">monoEnojado</param>
+                        </action>
+                        <action id="4" name="Preload" sid="8685611322725934" type="Audio">
+                            <param id="0" name="Audio file">noEspacioEninventario</param>
+                        </action>
+                        <action id="4" name="Preload" sid="4939166878201058" type="Audio">
+                            <param id="0" name="Audio file">objetoInteractivoSinDaD</param>
+                        </action>
+                        <action id="4" name="Preload" sid="2745882862152356" type="Audio">
+                            <param id="0" name="Audio file">paroCardiaco</param>
+                        </action>
+                        <action id="4" name="Preload" sid="3724051663519806" type="Audio">
+                            <param id="0" name="Audio file">poniendoEnInvenatario</param>
+                        </action>
+                        <action id="4" name="Preload" sid="6486569621879578" type="Audio">
+                            <param id="0" name="Audio file">boton</param>
+                        </action>
+                        <action id="4" name="Preload" sid="6964432621765355" type="Audio">
+                            <param id="0" name="Audio file">piditosCorazon</param>
+                        </action>
+                        <action id="4" name="Preload" sid="2822861375135153" type="Audio">
+                            <param id="0" name="Audio file">romperCaja</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2183329987872465">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2986635474161048" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5650921794033601">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4489796507446521" type="System">
+                                    <param id="0" name="Variable">Sonido</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3772263985541108">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="5810098190860759" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;puerta&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="7123624406678285" type="Audio">
+                                            <param id="0" name="Tag">&quot;puerta&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="25" name="Play at object" sid="3943137311769352" type="Audio">
+                                            <param id="0" name="Audio file">ascensor</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">-15</param>
+                                            <param id="3" name="Object">puerta</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;puerta&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1160931851551718">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="7063089589399261" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;mono&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="9574959597441268" type="Audio">
+                                            <param id="0" name="Tag">&quot;mono&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="25" name="Play at object" sid="7473502450814744" type="Audio">
+                                            <param id="0" name="Audio file">monoEnojado</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">0</param>
+                                            <param id="3" name="Object">mono</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;mono&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2713028222832672">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="4261190632005312" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;centinela&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="8610630427016455" type="Audio">
+                                            <param id="0" name="Tag">&quot;centinela&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="25" name="Play at object" sid="6482667531659376" type="Audio">
+                                            <param id="0" name="Audio file">centinela</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">-10</param>
+                                            <param id="3" name="Object">robotCentinela</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;centinela&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1649479063497597">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="1898444364692752" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;boton&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="9867903852395946" type="Audio">
+                                            <param id="0" name="Tag">&quot;boton&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="8046243001087974" type="Audio">
+                                            <param id="0" name="Audio file">boton</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;boton&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1440682080659826">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="4556121955964355" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;romperCaja&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="8075349840497803" type="Audio">
+                                            <param id="0" name="Tag">&quot;romperCaja&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="9543536963531193" type="Audio">
+                                            <param id="0" name="Audio file">romperCaja</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;romperCaja&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1232493918558102">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="5470508066051421" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;avispas&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="9129737776981962" type="Audio">
+                                            <param id="0" name="Tag">&quot;avispas&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="25" name="Play at object" sid="5602960796130972" type="Audio">
+                                            <param id="0" name="Audio file">avispas</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">-10</param>
+                                            <param id="3" name="Object">avispa</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">-5</param>
+                                            <param id="7" name="Tag (optional)">&quot;avispas&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8605195921911508">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="5491276898560278" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;soltandoObj&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="5130741507245847" type="Audio">
+                                            <param id="0" name="Tag">&quot;soltandoObj&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="4658885613491971" type="Audio">
+                                            <param id="0" name="Audio file">soltandoObjeto</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;soltandoObj&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6922619956694244">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="100988340014932" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;noEspacioEnInventario&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="9762094607401242" type="Audio">
+                                            <param id="0" name="Tag">&quot;noEspacioEnInventario&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="2672894764423181" type="Audio">
+                                            <param id="0" name="Audio file">noEspacioEninventario</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;noEspacioEnInventario&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7714720087380805">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="1618904663121203" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objInteractivoSinDaD&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="6852031777012828" type="Audio">
+                                            <param id="0" name="Tag">&quot;objInteractivoSinDaD&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="61530733877696" type="Audio">
+                                            <param id="0" name="Audio file">objetoInteractivoSinDaD</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;objInteractivoSinDaD&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6157982801017141">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2432862728525069" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;paroCardiaco&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="6676723593742785" type="Audio">
+                                            <param id="0" name="Tag">&quot;paroCardiaco&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="25" name="Play at object" sid="637664313948927" type="Audio">
+                                            <param id="0" name="Audio file">paroCardiaco</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">-25</param>
+                                            <param id="3" name="Object">muestraCorazon</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">-5</param>
+                                            <param id="7" name="Tag (optional)">&quot;paroCardiaco&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5932653944075734">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2291295137566869" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;poniendoEnInventario&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="8701991666307445" type="Audio">
+                                            <param id="0" name="Tag">&quot;poniendoEnInventario&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="7536827293710139" type="Audio">
+                                            <param id="0" name="Audio file">poniendoEnInvenatario</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;poniendoEnInventario&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2136012631728377">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="9474824089774991" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pitidosCorazon&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="3290989878986891" type="Audio">
+                                            <param id="0" name="Tag">&quot;pitidosCorazon&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="25" name="Play at object" sid="2944522045979444" type="Audio">
+                                            <param id="0" name="Audio file">piditosCorazon</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">0</param>
+                                            <param id="3" name="Object">muestraCorazon</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;pitidosCorazon&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6349736266532771">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="418665112623396" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;hongo&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="3717631792911441" type="Audio">
+                                            <param id="0" name="Tag">&quot;hongo&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="3092006631909439" type="Audio">
+                                            <param id="0" name="Audio file">hongo</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;hongo&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3597326517860144">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="9268768856647459" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;creandoInteractivo&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="7248457484919153" type="Audio">
+                                            <param id="0" name="Tag">&quot;creandoInteractivo&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="4725848248382099" type="Audio">
+                                            <param id="0" name="Audio file">creandoInteractivo</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;creandoInteractivo&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6020458395454021">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3446003104991697" type="System">
+                            <param id="0" name="Variable">Sonido</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3039586612480872">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="7325122526357673" type="Audio">
+                                    <param id="0" name="Tag">&quot;puerta&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="3520228336484461" type="Audio">
+                                    <param id="0" name="Tag">&quot;puerta&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8410275515718755">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="8191544722353101" type="Audio">
+                                    <param id="0" name="Tag">&quot;mono&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="8029003745171617" type="Audio">
+                                    <param id="0" name="Tag">&quot;mono&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8169298084564911">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="5713807256181478" type="Audio">
+                                    <param id="0" name="Tag">&quot;centinela&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="135091535852524" type="Audio">
+                                    <param id="0" name="Tag">&quot;centinela&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4638118448238533">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="8590727465728145" type="Audio">
+                                    <param id="0" name="Tag">&quot;boton&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="8752356881667499" type="Audio">
+                                    <param id="0" name="Tag">&quot;boton&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2997164129591701">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="7856776471298399" type="Audio">
+                                    <param id="0" name="Tag">&quot;romperCaja&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="7859882222327606" type="Audio">
+                                    <param id="0" name="Tag">&quot;romperCaja&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="648218299325386">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="3003957444474376" type="Audio">
+                                    <param id="0" name="Tag">&quot;avispas&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="3180070597986476" type="Audio">
+                                    <param id="0" name="Tag">&quot;avispas&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="969886046817401">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="3905007319381163" type="Audio">
+                                    <param id="0" name="Tag">&quot;soltandoObj&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="3367342350098182" type="Audio">
+                                    <param id="0" name="Tag">&quot;soltandoObj&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4038416782128163">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="8149497204948243" type="Audio">
+                                    <param id="0" name="Tag">&quot;noEspacioEnInventario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="7358293503391602" type="Audio">
+                                    <param id="0" name="Tag">&quot;noEspacioEnInventario&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3394261505074029">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="6746371741527428" type="Audio">
+                                    <param id="0" name="Tag">&quot;objInteractivoSinDaD&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="1174213685843178" type="Audio">
+                                    <param id="0" name="Tag">&quot;objInteractivoSinDaD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3465681238749667">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="2821415703662219" type="Audio">
+                                    <param id="0" name="Tag">&quot;paroCardiaco&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="9840721819760048" type="Audio">
+                                    <param id="0" name="Tag">&quot;paroCardiaco&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4728556093457106">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="5352644181499704" type="Audio">
+                                    <param id="0" name="Tag">&quot;poniendoEnInventario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="8204602935451948" type="Audio">
+                                    <param id="0" name="Tag">&quot;poniendoEnInventario&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8330723977422183">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="5390719341128749" type="Audio">
+                                    <param id="0" name="Tag">&quot;pitidosCorazon&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="1742688358549784" type="Audio">
+                                    <param id="0" name="Tag">&quot;pitidosCorazon&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9973811932073838">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="8183107376217375" type="Audio">
+                                    <param id="0" name="Tag">&quot;hongo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="482916590786715" type="Audio">
+                                    <param id="0" name="Tag">&quot;hongo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3544247897217645">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="444147015214949" type="Audio">
+                                    <param id="0" name="Tag">&quot;creandoInteractivo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="3246979737050143" type="Audio">
+                                    <param id="0" name="Tag">&quot;creandoInteractivo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4922091614751709" title="Music">
+            <sub-events>
+                <variable constant="0" name="volumen" sid="2086474178137204" static="0" type="number">-10</variable>
+                <event-block sid="9252098991164849">
+                    <conditions>
+                        <condition id="0" name="On function" sid="649348514498598" type="Function">
+                            <param id="0" name="Name">&quot;cargarMusicas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Preload" sid="8349605471637773" type="Audio">
+                            <param id="0" name="Audio file">lvl1_14_Relent</param>
+                        </action>
+                        <action id="4" name="Preload" sid="3353480321473099" type="Audio">
+                            <param id="0" name="Audio file">lvl1_30_Broken Reality</param>
+                        </action>
+                        <action id="4" name="Preload" sid="7571595824006454" type="Audio">
+                            <param id="0" name="Audio file">lvl2_14_CheeZeeJungle</param>
+                        </action>
+                        <action id="4" name="Preload" sid="4107723728938553" type="Audio">
+                            <param id="0" name="Audio file">lvl2_30_Digya</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="619205018804135">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1002395482193688" type="Function">
+                            <param id="0" name="Name">&quot;musica&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="259546457812806">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8240778521599404" type="System">
+                                    <param id="0" name="Variable">Musica</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2256119313631308">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="5847483310655271" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;lvl1-14&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="2900873143876416" type="Audio">
+                                            <param id="0" name="Tag">&quot;lvl1-14&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="4737518804863706" type="Audio">
+                                            <param id="0" name="Audio file">lvl1_14_Relent</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">volumen</param>
+                                            <param id="1" name="Tag (optional)">&quot;lvl1-14&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5263895745690302">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="4943033367049891" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;lvl1-30&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="4342352449299908" type="Audio">
+                                            <param id="0" name="Tag">&quot;lvl1-30&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="9330460830351446" type="Audio">
+                                            <param id="0" name="Audio file">lvl1_30_Broken Reality</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">volumen</param>
+                                            <param id="1" name="Tag (optional)">&quot;lvl1-30&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7639410496456333">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2935138418382546" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;lvl2-14&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="1993202177595636" type="Audio">
+                                            <param id="0" name="Tag">&quot;lvl2-14&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="5206744566289497" type="Audio">
+                                            <param id="0" name="Audio file">lvl2_14_CheeZeeJungle</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">volumen</param>
+                                            <param id="1" name="Tag (optional)">&quot;lvl2-14&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="632683182976279">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="9615035303220831" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;lvl2-30&quot;</param>
+                                        </condition>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="4784597070971528" type="Audio">
+                                            <param id="0" name="Tag">&quot;lvl2-30&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="7403148813962755" type="Audio">
+                                            <param id="0" name="Audio file">lvl2_30_Digya</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">volumen</param>
+                                            <param id="1" name="Tag (optional)">&quot;lvl2-30&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3805632052302788">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6066720127716174" type="System">
+                            <param id="0" name="Variable">Musica</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5004755343697408">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="2225713684476914" type="Audio">
+                                    <param id="0" name="Tag">&quot;lvl1-14&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="7868448092739102" type="Audio">
+                                    <param id="0" name="Tag">&quot;lvl1-14&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9788007104851643">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="8256261496956962" type="Audio">
+                                    <param id="0" name="Tag">&quot;lvl1-30&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="8340527905002349" type="Audio">
+                                    <param id="0" name="Tag">&quot;lvl1-30&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5028321696849921">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="273832012396164" type="Audio">
+                                    <param id="0" name="Tag">&quot;lvl2-14&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="5031965441769184" type="Audio">
+                                    <param id="0" name="Tag">&quot;lvl2-14&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6037814127678036">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="2691662559411293" type="Audio">
+                                    <param id="0" name="Tag">&quot;lvl2-30&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="8890173028609266" type="Audio">
+                                    <param id="0" name="Tag">&quot;lvl2-30&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

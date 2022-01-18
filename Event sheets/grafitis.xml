@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>grafitis</name>
+    <events>
+        <comment>el idioma del juego es español</comment>
+        <event-block sid="2494993601891376">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="149268463820174" type="System">
+                    <param id="0" name="Variable">idiomaEspañol</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8263237068906097" type="grafitiEspañol">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9625463692918149" type="grafitiIngles">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>el idioma del juego es ingles</comment>
+        <event-block sid="6304308343201117">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6184363397201894" type="System">
+                    <param id="0" name="Variable">idiomaEspañol</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6131029215689168" type="grafitiEspañol">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1525573932176017" type="grafitiIngles">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

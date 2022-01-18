@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>guardiaHumano</name>
+    <events>
+        <comment>movimiento</comment>
+        <event-block sid="9365677741174886">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1816363833368684" type="guardia">
+                    <param id="0" name="Instance variable">caminandoDerecha</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="482062583333662" type="guardia">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="9296781079017965" type="guardia">
+                    <param id="0" name="Animation">&quot;caminando_derecha&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2880041226554003">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6524599630702981" type="guardia">
+                    <param id="0" name="Instance variable">caminandoIzquierda</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="9175748604341028" type="guardia">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="4636910032528066" type="guardia">
+                    <param id="0" name="Animation">&quot;caminando_izquierda&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6503778847858162">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="62974717587364" type="guardia">
+                    <param id="0" name="Instance variable">detenido</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="7980377783899553" type="guardia">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4478751868039508">
+            <conditions>
+                <condition id="-22" name="Else" sid="9257661196471959" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="9897539950892322" type="guardia">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>colisiones  de movimiento</comment>
+        <event-block sid="5747346355600398">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2204030614202282" type="guardia">
+                    <param id="0" name="Object">robotIrIzquierda</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6026652162936483" type="guardia">
+                    <param id="0" name="Instance variable">caminandoIzquierda</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="2289631915146423" type="guardia">
+                    <param id="0" name="Instance variable">caminandoDerecha</param>
+                    <param id="1" name="Value">&quot;no&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8562183962736815">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6818664415445484" type="guardia">
+                    <param id="0" name="Object">robotIrDerecha</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="7143362495728458" type="guardia">
+                    <param id="0" name="Instance variable">caminandoDerecha</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="9037890498950086" type="guardia">
+                    <param id="0" name="Instance variable">caminandoIzquierda</param>
+                    <param id="1" name="Value">&quot;no&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>colisiones de objetos</comment>
+        <event-block sid="19731945115435">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9988579661121713" type="personaje_14">
+                    <param id="0" name="Object">guardia</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="520536949865365" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ14&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

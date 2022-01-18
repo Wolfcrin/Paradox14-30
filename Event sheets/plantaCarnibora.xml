@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>plantaCarnibora</name>
+    <events>
+        <event-block sid="1551376492959434">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5119085874473602" type="plantaCarniboraMoustrosa">
+                    <param id="0" name="Object">personaje_14</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="9206514057312051" type="plantaCarniboraMoustrosa">
+                    <param id="0" name="Animation">&quot;muerta&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="8617018846200871" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ14&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6548856943530573">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7700035952444549" type="plantaCarniboraMoustrosa">
+                    <param id="0" name="Object">personaje_14</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="5649978762364512" type="plantaCarniboraMoustrosa">
+                    <param id="0" name="Animation">&quot;muerta&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="7985789138390208" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

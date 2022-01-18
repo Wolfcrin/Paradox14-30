@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>maquinaCrearPesticida</name>
+    <events>
+        <event-group description="" sid="7405116486299982" title="Maquina Crea Pesticida">
+            <sub-events>
+                <comment>Miel</comment>
+                <event-block sid="2550637929931522">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6952726251483032" type="ingredienteMiel">
+                            <param id="0" name="Object">maquinaCreaPesticida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="6368291641457145" type="ingredienteMiel">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2517747441060806" type="ingredienteMiel">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="1610344593336891" type="ingredienteMiel">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9359546680489283" type="ingredienteMiel">
+                            <param id="0" name="Instance variable">colisionEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="8768164721533644" type="ingredienteMiel">
+                            <param id="0" name="Object">maquinaCreaPesticida</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7523614296708041" type="lvl2Control">
+                            <param id="0" name="Instance variable">ingredienteMiel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="442212850866145">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1009884132704376" type="ingredienteFlor">
+                            <param id="0" name="Object">maquinaCreaPesticida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="5574453268509763" type="ingredienteFlor">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4880224800662699" type="ingredienteFlor">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="7168107668580465" type="ingredienteFlor">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2315620504077671" type="ingredienteFlor">
+                            <param id="0" name="Instance variable">colisionEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="5057127834186504" type="ingredienteFlor">
+                            <param id="0" name="Object">maquinaCreaPesticida</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7501296131922142" type="lvl2Control">
+                            <param id="0" name="Instance variable">ingredienteFlor</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4584723520380756">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1850279381342209" type="ingredienteFrasco">
+                            <param id="0" name="Object">maquinaCreaPesticida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="9555210249108121" type="ingredienteFrasco">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9041776277906941" type="ingredienteFrasco">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="2630075149475452" type="ingredienteFrasco">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9960039828670005" type="ingredienteFrasco">
+                            <param id="0" name="Instance variable">colisionEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="9923019541013478" type="ingredienteFrasco">
+                            <param id="0" name="Object">maquinaCreaPesticida</param>
+                            <param id="1" name="Image point (optional)">3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8528743008347147" type="lvl2Control">
+                            <param id="0" name="Instance variable">ingredienteFrasco</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1083194702716112">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6352264300448416" type="lvl2Control">
+                            <param id="0" name="Instance variable">ingredienteMiel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2108198365746374" type="lvl2Control">
+                            <param id="0" name="Instance variable">ingredienteFlor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2956424448850036" type="lvl2Control">
+                            <param id="0" name="Instance variable">ingredienteFrasco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="53444448552803" type="lvl2Control">
+                            <param id="0" name="Instance variable">ingredienteObtubePesticida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="824258773562968" type="ingredienteFrasco">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3010040182273303" type="ingredienteFrasco">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7138179369897194" type="ingredienteFlor">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7964942316268948" type="ingredienteFlor">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="256222254688966" type="ingredienteMiel">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="157619017641796" type="ingredienteMiel">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="5637564097429853" type="ingredientePesticida">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6349442877871573" type="ingredientePesticida">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6501094058418432" type="ingredientePesticida">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4546800181101726" type="ingredientePesticida">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="1516843468787003" type="ingredientePesticida">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7481360226428671" type="ingredientePesticida">
+                            <param id="0" name="Instance variable">colisionEnabled</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="7185492399873246" type="ingredientePesticida">
+                            <param id="0" name="Object">maquinaCreaPesticida</param>
+                            <param id="1" name="Image point (optional)">4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4194320824078761" type="lvl2Control">
+                            <param id="0" name="Instance variable">ingredienteObtubePesticida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

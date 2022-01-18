@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Robot</name>
+    <events>
+        <comment>movimiento</comment>
+        <event-block sid="9812801745671781">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5470919989868601" type="robot">
+                    <param id="0" name="Instance variable">caminandoDerecha</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="5501694608149959" type="robot">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3790765927511327">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1046581215190233" type="robot">
+                    <param id="0" name="Instance variable">caminandoIzquierda</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="787835862741432" type="robot">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2067681532178855">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4260506907521419" type="robot">
+                    <param id="0" name="Instance variable">detenido</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="3896808372000897" type="robot">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9178544840707113">
+            <conditions>
+                <condition id="-22" name="Else" sid="1501784856056516" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="48729765203184" type="robot">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>colisiones  de movimiento</comment>
+        <event-block sid="8323953354683416">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="562920008817638" type="robot">
+                    <param id="0" name="Object">robotIrIzquierda</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2567454244053371" type="robot">
+                    <param id="0" name="Instance variable">caminandoIzquierda</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="3010200077936784" type="robot">
+                    <param id="0" name="Instance variable">caminandoDerecha</param>
+                    <param id="1" name="Value">&quot;no&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4403920585037968">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="696055698717632" type="robot">
+                    <param id="0" name="Object">robotIrDerecha</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="997421754580954" type="robot">
+                    <param id="0" name="Instance variable">caminandoDerecha</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="5079036940741225" type="robot">
+                    <param id="0" name="Instance variable">caminandoIzquierda</param>
+                    <param id="1" name="Value">&quot;no&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5879957615729924">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5660058562319905" type="robot">
+                    <param id="0" name="Object">destruiRobot</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="7844774410908038" type="robot">
+                    <param id="0" name="Instance variable">nombre</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;giraValvulas&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="5510347839788691" type="robot">
+                    <param id="0" name="Object">Particles2</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="5705248511819197" type="robot" />
+            </actions>
+        </event-block>
+        <comment>colisiones de objetos</comment>
+        <event-block sid="8590542073494695">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1441888617283838" type="robot">
+                    <param id="0" name="Object">cuadroDePeligro</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9441416313617217" type="robot">
+                    <param id="0" name="Instance variable">detenido</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="2229553298507283" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="8851582374487568" type="robot">
+                    <param id="0" name="Instance variable">detenido</param>
+                    <param id="1" name="Value">&quot;no&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="79739525751161">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2240662225631959" type="personaje_14">
+                    <param id="0" name="Object">robot</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="6679787824689167" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ14&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

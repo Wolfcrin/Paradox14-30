@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mono</name>
+    <events>
+        <comment>El mono se termino de regenerar</comment>
+        <event-block sid="8775316832249467">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="281315538599685" type="lvl1Control">
+                    <param id="0" name="Instance variable">LVL1_zona3_No_regenerar_Mono</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4182042695093206">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3458793469821436" type="System">
+                            <param id="0" name="First value">distance(mono.X,mono.Y,personaje_30.X,personaje_30.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">700</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4368705393831499" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2030</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="8409189733509021" type="mono">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="6159155158303805" type="mono">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9520296351125092" type="mono">
+                            <param id="0" name="Instance variable">enCriogenia</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="7446818920404407" type="mono">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="336158777574409">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="5262859485156756" type="mono" />
+                        <condition id="1" name="Is overlapping another object" sid="1071889102888564" type="personaje_30">
+                            <param id="0" name="Object">controlMono</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="2640924400400784" type="personaje_30">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2260907245834296" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;mono&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>El mono no se temrino de regenerar</comment>
+                <comment>cuando el mono no esta en el tanque de criogenia</comment>
+                <event-block sid="4087507269933859">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8558389326335129" type="mono">
+                            <param id="0" name="Instance variable">enCriogenia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3011781840116054" type="mono">
+                            <param id="0" name="Instance variable">caminandoIzquierda</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1477255866711076">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5708762019055731" type="mono">
+                            <param id="0" name="Instance variable">caminandoDerecha</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="3669673237025945" type="mono">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5787226678028225" type="mono">
+                            <param id="0" name="Instance variable">caminandoIzquierda</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4401633633050259">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6518574162328965" type="mono">
+                            <param id="0" name="Instance variable">caminandoIzquierda</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="6040397129804156" type="mono">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6436389362280234" type="mono">
+                            <param id="0" name="Instance variable">caminandoDerecha</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6764351550824473">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1310575096965979" type="robotIrDerecha">
+                            <param id="0" name="Object">mono</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5176020432293737" type="mono">
+                            <param id="0" name="Instance variable">caminandoIzquierda</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7310147198322619" type="mono">
+                            <param id="0" name="Instance variable">caminandoDerecha</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5041305223460887">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7710920267117999" type="robotIrIzquierda">
+                            <param id="0" name="Object">mono</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5891550349609676" type="mono">
+                            <param id="0" name="Instance variable">caminandoIzquierda</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="207537470923461" type="mono">
+                            <param id="0" name="Instance variable">caminandoDerecha</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="348082084647791">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2325305120121419" type="personaje_30">
+                    <param id="0" name="Object">mono</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="4353121392947562" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5202622437480016">
+            <conditions>
+                <condition id="-18" name="On created" sid="9420288973146751" type="mono" />
+                <condition id="-7" name="Compare instance variable" sid="8783445575557122" type="reloj_configuracion">
+                    <param id="0" name="Instance variable">fecha_nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2014</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="4053458571037865" type="mono">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="2" name="Stop" sid="9564926739795139" type="mono" />
+            </actions>
+        </event-block>
+        <event-block sid="1563434929363176">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9481579615947622" type="lvl1Control">
+                    <param id="0" name="Instance variable">LVL1_zona3_No_regenerar_Mono</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4348445168536445" type="mono">
+                    <param id="0" name="Animation">&quot;muerto&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="5564701492978083" type="mono">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

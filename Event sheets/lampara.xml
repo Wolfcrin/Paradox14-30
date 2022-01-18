@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>lampara</name>
+    <events>
+        <comment>la lampara cada 3 segundos, crea un circulo de luz oscura, que aumenta de tamaño&#x0D;&#x0A;y de opacacidad.&#x0D;&#x0A;cuando llega a un tamaño grande se destruye</comment>
+        <event-block disabled="1" sid="3403745646635557">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7251946675633939" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2758367552970338" type="lampara">
+                    <param id="0" name="Object">luz</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="2423987658478866" type="luz">
+                    <param id="0" name="Opacity">10</param>
+                </action>
+                <action id="9" name="Set scale" sid="7001349987247562" type="luz">
+                    <param id="0" name="Scale">0.3</param>
+                </action>
+                <action id="-16" name="Wait" sid="4424031785711024" type="System">
+                    <param id="0" name="Seconds">lampara.tiempoDeFaces</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="5174709420021454" type="luz">
+                    <param id="0" name="Opacity">20</param>
+                </action>
+                <action id="9" name="Set scale" sid="7390092122945092" type="luz">
+                    <param id="0" name="Scale">0.4</param>
+                </action>
+                <action id="-16" name="Wait" sid="6049704891962874" type="System">
+                    <param id="0" name="Seconds">lampara.tiempoDeFaces</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="6500770378113829" type="luz">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+                <action id="9" name="Set scale" sid="6754113156895016" type="luz">
+                    <param id="0" name="Scale">0.5</param>
+                </action>
+                <action id="-16" name="Wait" sid="1502717236235231" type="System">
+                    <param id="0" name="Seconds">lampara.tiempoDeFaces</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="6165229015727121" type="luz">
+                    <param id="0" name="Opacity">40</param>
+                </action>
+                <action id="9" name="Set scale" sid="4649132223457119" type="luz">
+                    <param id="0" name="Scale">0.6</param>
+                </action>
+                <action id="-16" name="Wait" sid="2783362886572767" type="System">
+                    <param id="0" name="Seconds">lampara.tiempoDeFaces</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="9520742257490591" type="luz">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="9" name="Set scale" sid="6488621381047606" type="luz">
+                    <param id="0" name="Scale">0.7</param>
+                </action>
+                <action id="-16" name="Wait" sid="9537447471086137" type="System">
+                    <param id="0" name="Seconds">lampara.tiempoDeFaces</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="3009563981993706" type="luz">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+                <action id="9" name="Set scale" sid="5054177754797867" type="luz">
+                    <param id="0" name="Scale">0.8</param>
+                </action>
+                <action id="-9" name="Destroy" sid="7489613840315645" type="luz" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="8245291600311297">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="6055342872887661" type="lampara">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="4757083640918318" type="luz">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1931381374425875">
+            <conditions>
+                <condition id="-18" name="On created" sid="1809870082939635" type="lampara" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="0" name="Spawn another object" sid="8691353979142823" type="lampara">
+                    <param id="0" name="Object">luz</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action disabled="1" id="-26" name="Move to layer" sid="5592766428491424" type="luz">
+                    <param id="0" name="Layer">3</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="1449703677693904" type="luz">
+                    <param id="0" name="Object">lampara</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-24" name="Move to top" sid="5732334768418997" type="luz" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

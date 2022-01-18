@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CodLevel 1 -30</name>
+    <events>
+        <variable constant="0" name="lvl1_30_yasecayo" sid="2846243796545226" static="0" type="number">0</variable>
+        <include>grafitis</include>
+        <include>audio</include>
+        <include>Personaje_30</include>
+        <comment>Interfaz</comment>
+        <include>Interfaz</include>
+        <include>telefonoDelTiempo</include>
+        <include>guardadoDicionary</include>
+        <comment>Objetos del escenario</comment>
+        <include>escalera</include>
+        <include>cristal de hielo</include>
+        <include>ventilador</include>
+        <include>tapaTapaDeNitrogeno</include>
+        <include>valvula</include>
+        <include>cajas</include>
+        <include>lampara</include>
+        <include>puerta</include>
+        <include>plataforma</include>
+        <comment>Enemigos</comment>
+        <include>robotSentinela</include>
+        <include>mono</include>
+        <event-block sid="3494515407013136">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6222947206204511" type="System">
+                    <param id="0" name="Variable">Musica</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="5573010325387919" type="Function">
+                    <param id="0" name="Name">&quot;musica&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;lvl1-30&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4084628490374477">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8124065956539404" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7742530208472428" type="System">
+                    <param id="0" name="Variable">AQNivel2014</param>
+                    <param id="1" name="Value">&quot;Level1-14&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="1398367102508507" type="System">
+                    <param id="0" name="Variable">AQNivel2030</param>
+                    <param id="1" name="Value">&quot;Level1-30&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>si no es la primera vez que se carga buscamos los valores en cargarEstado</comment>
+                <event-block sid="4914787913938019">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6005141481687903" type="System">
+                            <param id="0" name="Variable">LVL1_30_yasecargo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4117600537375491" type="Function">
+                            <param id="0" name="Name">&quot;cargarEstado&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Si se esta comenzando un juego nuevo</comment>
+                <event-block sid="8341880776474227">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9844885231013869" type="System">
+                            <param id="0" name="Variable">MenuJuegoNuevo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-36" name="Save" sid="5033505946169679" type="System">
+                            <param id="0" name="Slot">&quot;paradoxsave&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3715291829010177" type="System">
+                            <param id="0" name="Variable">MenuJuegoNuevo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7770640728597048">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2143150621032313" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona1_cable_eletricidad</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5520644969368287" type="puerta">
+                            <param id="0" name="Instance variable">tope</param>
+                            <param id="1" name="Value">320</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="906383148354915" type="cableDoble">
+                            <param id="0" name="Object">cableCortado</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="2673272024632369" type="cableDoble">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8038053921217447">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7154030965739204" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona1_llave_eletricidad</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="3984487293354251" type="llaveInglesa">
+                            <param id="0" name="Object">cableCortado</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="1343352308171795" type="llaveInglesa">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="3697236604197415" type="llaveInglesa">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3689535194037328">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5039836642830991" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona2_valvulaGirada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8873488185383955" type="valvula">
+                            <param id="0" name="Instance variable">interactivo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="5083602793031752" type="valvula">
+                            <param id="0" name="Object">ponerAquiValvula</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1964290108842312" type="llaveInglesa">
+                            <param id="0" name="Object">ponerAquiValvula</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="1688940581500102" type="llaveInglesa">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">valvula</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8738053249181643" type="tapaDeTanqueDeNitrogeno">
+                            <param id="0" name="Instance variable">arriba</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="1972311577245429" type="tapaDeTanqueDeNitrogeno">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="9892711623317599" type="valvula">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="7905692562794469" type="llaveInglesa">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5771042297411546">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8694378906686389" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona1_viga_de_contencion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5141801808475607" type="vigadecontencion">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="9015449350424273" type="vigadecontencion">
+                            <param id="0" name="Object">zonaColisionViga</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="1839608886167832" type="vigadecontencion">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="1061656878391582" type="vigadecontencion">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7425343553797231" type="vigadecontencion">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="5145745949454149" type="vigadecontencion">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2843372557765111">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5058954903015614" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona1_viga_de_contencion2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8028829685625903" type="vigadecontencion">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="6964346779185788" type="vigadecontencion">
+                            <param id="0" name="Object">zonaColisionViga</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="638715257200179" type="vigadecontencion">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="8119700752411779" type="vigadecontencion">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6675936169091727" type="vigadecontencion">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="6811048209567194" type="vigadecontencion">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1813358072208991">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5582544354225176" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona2_hielo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4891963375195339" type="estalacmitaDeHielo" />
+                        <action id="-9" name="Destroy" sid="1437743940994363" type="hielo" />
+                    </actions>
+                </event-block>
+                <event-block sid="3325401004240477">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8249866508715368" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona3_No_regenerar_Mono</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="7113687166473704" type="muestraCorazon" />
+                        <action id="5" name="Set frame" sid="7669782806756345" type="muestraCorazon">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4495303714513502">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3264199559144985" type="lugarControlAscensor">
+                                    <param id="0" name="Instance variable">numero</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="2572111355210328" type="SuperPC1">
+                                    <param id="0" name="Object">lugarControlAscensor</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="4529166461972701" type="SuperPC1">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">lugarControlAscensor</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="1623678351609722" type="SuperPC1">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9494100061043943">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8535298857614918" type="lugarControlAscensor">
+                                    <param id="0" name="Instance variable">numero</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="946052023128413" type="SuperPC2">
+                                    <param id="0" name="Object">lugarControlAscensor</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="8539032553370152" type="SuperPC2">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">lugarControlAscensor</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="4518451331679368" type="SuperPC2">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="226293695504119">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="883441450370643" type="lugarControlAscensor">
+                                    <param id="0" name="Instance variable">numero</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="722034436368897" type="SuperPC3">
+                                    <param id="0" name="Object">lugarControlAscensor</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="4324681665774427" type="SuperPC3">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">lugarControlAscensor</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="409201551474004" type="SuperPC3">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7880611117157052">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="578001124402361" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona3_subirAscensor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6039693685531763" type="lugarControlAscensor">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="6911211333227421" type="controlAscensor">
+                            <param id="0" name="Object">lugarControlAscensor</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="3782296100955453" type="controlAscensor">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">lugarControlAscensor</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="1287412746465529" type="System">
+                            <param id="0" name="Group name">&quot;plataformaMovi&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6532334354787836">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6036598438961859" type="personaje_30">
+                    <param id="0" name="Object">robotIrIzquierda</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="5964727867530753" type="robotIrIzquierda">
+                    <param id="0" name="Unique ID">1713</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4808561935641723" type="Piso_internos">
+                    <param id="0" name="Instance variable">seCae</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8205507895053529" type="System">
+                    <param id="0" name="Variable">lvl1_30_yasecayo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="204524492218724" type="Piso_internos">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="0" name="Call function" sid="8630304440361393" type="Function">
+                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;romperCaja&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="8137273210062106" type="System">
+                    <param id="0" name="Variable">lvl1_30_yasecayo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4659761269001254">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5464240115091942" type="personaje_30">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8693445110052189" type="System">
+                    <param id="0" name="Layout">Level2-14</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6136185794611561">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2048159843835214" type="personaje_30">
+                    <param id="0" name="Object">puerta</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5429962678000509" type="lvl1Control">
+                    <param id="0" name="Instance variable">LVL1_zona1_cable_eletricidad</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4855484985350402" type="flecha">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="3083692720391184" type="flecha" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

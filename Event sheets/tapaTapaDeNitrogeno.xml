@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>tapaTapaDeNitrogeno</name>
+    <events>
+        <comment>segun q tenga seteada la variable es lo q hace la tapa </comment>
+        <event-block sid="6526689289822499">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4378740038673894" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Instance variable">arriba</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="5056110856845887" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Angle">270</param>
+                    <param id="1" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4224989627298441">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9771691608198581" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Instance variable">abajo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3909016909835039" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4867820012927469">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8243463349485517" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Object">controlDeTapaTanque</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4065082927342605" type="controlDeTapaTanque">
+                    <param id="0" name="Instance variable">arriba</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6669479705755255" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Instance variable">arriba</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="5526007231732776" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Instance variable">abajo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Las colisiones, para controlar si la tapa va arriba o abajo</comment>
+        <event-block sid="1611534627310472">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6480829971678884" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Object">controlDeTapaTanque</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="7706884171915445" type="controlDeTapaTanque">
+                    <param id="0" name="Instance variable">abajo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="4293910591055923" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Instance variable">arriba</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7514163449953932" type="tapaDeTanqueDeNitrogeno">
+                    <param id="0" name="Instance variable">abajo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Interfaz</name>
+    <events>
+        <include>configuracion</include>
+        <comment>Creamos lo objetos de la interfaz, en las posiciones, con los tamaños, y con las coordenadas z correspondientes</comment>
+        <event-block sid="2614697401342197">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2501254822777058" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2265521030059885" type="txtFps">
+                    <param id="0" name="Text">&quot;fps:&quot;&amp;fps</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6635884094098837">
+            <conditions>
+                <condition id="-18" name="On created" sid="740123581285418" type="reloj_configuracion" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="3286452460985936" type="System">
+                    <param id="0" name="Object to create">txtFps</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">221</param>
+                    <param id="3" name="Y">10</param>
+                </action>
+                <action id="-7" name="Set size" sid="277334331033597" type="txtFps">
+                    <param id="0" name="Width">200</param>
+                    <param id="1" name="Height">30</param>
+                </action>
+                <action id="-3" name="Create object" sid="1306563406994872" type="System">
+                    <param id="0" name="Object to create">telefonoDelTiempo</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="X">675</param>
+                    <param id="3" name="Y">9</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9040447581139968">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4234345239659182" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2014</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4178560814771532" type="casillaInventario" />
+                        <action id="-3" name="Create object" sid="1024723370174507" type="System">
+                            <param id="0" name="Object to create">baseInventario</param>
+                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="738069922340171" type="baseInventario">
+                            <param id="0" name="Object">fondo_fecha2014</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">6</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="5986399379889325" type="fondo_fecha2014">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="5699433897495596" type="baseInventario" />
+                        <action id="0" name="Spawn another object" sid="5583559184879024" type="baseInventario">
+                            <param id="0" name="Object">casillaInventario</param>
+                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="2326417712537817" type="casillaInventario" />
+                        <action id="-10" name="Set value" sid="89487365940517" type="casillaInventario">
+                            <param id="0" name="Instance variable">casilla</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6230873306174843" type="baseInventario">
+                            <param id="0" name="Object">casillaInventario</param>
+                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="2650955488298055" type="casillaInventario" />
+                        <action id="-10" name="Set value" sid="1710830298047056" type="casillaInventario">
+                            <param id="0" name="Instance variable">casilla</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="825233299460408" type="baseInventario">
+                            <param id="0" name="Object">casillaInventario</param>
+                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="1623868117594482" type="casillaInventario" />
+                        <action id="-10" name="Set value" sid="7931549228658991" type="casillaInventario">
+                            <param id="0" name="Instance variable">casilla</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5344000902757145" type="baseInventario">
+                            <param id="0" name="Object">casillaInventario</param>
+                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="2191240286700943" type="casillaInventario" />
+                        <action id="-10" name="Set value" sid="236851146402154" type="casillaInventario">
+                            <param id="0" name="Instance variable">casilla</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1214439041202404" type="baseInventario">
+                            <param id="0" name="Object">casillaInventario</param>
+                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                            <param id="2" name="Image point">5</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="459550402507033" type="casillaInventario" />
+                        <action id="-10" name="Set value" sid="2982073706100479" type="casillaInventario">
+                            <param id="0" name="Instance variable">casilla</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5910867976036067" type="System">
+                            <param id="0" name="Object to create">control_inventario</param>
+                            <param id="1" name="Layer">NUMERO_INTERFAZ</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="7881547239460213" type="control_inventario">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">casillaInventario</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4800762888466865" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9239141270987785" type="fondo_fecha2014">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5371719364615076" type="btn_ocultar_fecha">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5387955760428565" type="btn_mostrar_fecha">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6829777589732942">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2452174804333465" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2030</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5361511485132797" type="System">
+                            <param id="0" name="Object to create">fondo_fecha2030</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5889544449069332" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3830610851340079" type="fondo_fecha2030">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2778676140312266" type="btn_ocultar_fecha">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5824284145543536" type="btn_mostrar_fecha">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

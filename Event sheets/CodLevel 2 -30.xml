@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CodLevel 2 -30</name>
+    <events>
+        <include>audio</include>
+        <include>avispas</include>
+        <variable constant="0" name="LVL2_control_existe" sid="1960824014563337" static="0" type="number">0</variable>
+        <include>pastoYespina</include>
+        <include>guardadoDicionary</include>
+        <include>configuracion</include>
+        <include>telefonoDelTiempo</include>
+        <include>Personaje_30</include>
+        <include>aguaYradiactivo</include>
+        <include>escalera</include>
+        <include>pala</include>
+        <include>tijerasYpala</include>
+        <include>Inventario</include>
+        <include>maquinaCreaPollos</include>
+        <include>hongo</include>
+        <include>Interfaz</include>
+        <comment>Al comienzo ocultamos los item que no se usan</comment>
+        <event-block sid="4256159506603213">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5234327057469033" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6926894616487796" type="lvl1Control" />
+                <action id="-9" name="Set value" sid="3923763422734429" type="System">
+                    <param id="0" name="Variable">AQNivel2014</param>
+                    <param id="1" name="Value">&quot;Level2-14&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="4862055419241928" type="System">
+                    <param id="0" name="Variable">AQNivel2030</param>
+                    <param id="1" name="Value">&quot;Level2-30&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="54090847746917" type="pala">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="4736947331283473" type="pala">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8045817156213624" type="tijera">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="8616493636519869" type="tijera">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2172990711194077">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5062155410272408" type="lvl2Control">
+                            <param id="0" name="Instance variable">LVL2_yaseCargo1Vez_30</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8942497955338362" type="Function">
+                            <param id="0" name="Name">&quot;cargarEstado&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7485590795081457">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8063668585637476" type="System">
+                            <param id="0" name="Variable">Musica</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2912018652790311" type="Function">
+                            <param id="0" name="Name">&quot;musica&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;lvl2-30&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>La planta mutante esta muerta</comment>
+                <event-block sid="1291693492195349">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2016562885378343" type="lvl2Control">
+                            <param id="0" name="Instance variable">Lvl2_zona3_plantaMutante</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="2812239736232065" type="plantaCarniboraMoustrosa">
+                            <param id="0" name="Width">500</param>
+                            <param id="1" name="Height">500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>La avispas son visibles</comment>
+                <event-block sid="3077867909079894">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6928011932473838" type="lvl2Control">
+                            <param id="0" name="Instance variable">LVl2_zona2_avispasMutantes</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="4340989645777839" type="panal">
+                            <param id="0" name="Width">290</param>
+                            <param id="1" name="Height">400</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5633049787024739" type="avispa">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="875650145009852" type="avispa">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Las avispas estan muertas</comment>
+                <event-block sid="5348331068468237">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9395475838935092" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6134879020093906" type="avispa">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="3204478804655461" type="avispa">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="3106257323985564" type="panal">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="2937571781490312" type="flor">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

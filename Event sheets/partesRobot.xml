@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>partesRobot</name>
+    <events>
+        <event-group collapsed="1" description="" sid="2659111974243304" title="pies">
+            <sub-events>
+                <event-block sid="5575004071482505">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3328805056954058" type="pieIzquierdo">
+                            <param id="0" name="Object">pieDerecho</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1821414998843277" type="pieDerecho">
+                            <param id="0" name="Instance variable">arriba</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9688277677565185" type="pieDerecho">
+                            <param id="0" name="Instance variable">abajo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="7839792190008065" type="pieIzquierdo">
+                            <param id="0" name="Instance variable">arriba</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="9076121880364537" type="pieIzquierdo">
+                            <param id="0" name="Instance variable">abajo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9758114361323972">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9670695855889579" type="pieDerecho">
+                            <param id="0" name="Instance variable">arriba</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="4438105256924527" type="pieDerecho">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9504879040785092">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9093347497027756" type="pieDerecho">
+                            <param id="0" name="Instance variable">abajo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="2171919499235644" type="pieDerecho">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2368428412998199">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2977892821534036" type="pieDerecho">
+                            <param id="0" name="Object">controlDeTapaTanque</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6165763854646409" type="pieDerecho">
+                            <param id="0" name="Instance variable">arriba</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8783339006800947" type="pieDerecho">
+                            <param id="0" name="Instance variable">abajo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6604481852951849">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8971273100494825" type="pieDerecho">
+                            <param id="0" name="Object">personaje_14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4750442176282313" type="Function">
+                            <param id="0" name="Name">&quot;matarPJ14&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="2669280266531635" title="cabeza">
+            <sub-events>
+                <event-block disabled="1" sid="2387659002814667">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4210320482973358" type="cabeza">
+                            <param id="0" name="Object">Piso_internos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="6776169140191355" type="cabeza">
+                            <param id="0" name="Angle">180</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>plataforma</name>
+    <events>
+        <event-group description="" inactive="1" sid="5003164773861312" title="plataformaMovi">
+            <sub-events>
+                <event-block sid="2180476971418702">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7116938760903055" type="plataforma">
+                            <param id="0" name="Instance variable">Arriba</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2344622454294729" type="plataforma">
+                            <param id="0" name="Instance variable">Abajo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="1335880286572899" type="plataforma">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4942528086774559">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2015059341148133" type="plataforma">
+                            <param id="0" name="Instance variable">Abajo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="361103789613119" type="plataforma">
+                            <param id="0" name="Instance variable">Arriba</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="7649876946012813" type="plataforma">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1772848305470423">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8154375484950202" type="plataforma">
+                            <param id="0" name="Object">controlDeTapaTanque</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6301097384840632" type="controlDeTapaTanque">
+                            <param id="0" name="Instance variable">arriba</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="7957651288125638" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3771935852609937" type="plataforma">
+                            <param id="0" name="Instance variable">Arriba</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5520532936806294" type="plataforma">
+                            <param id="0" name="Instance variable">Abajo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4245952589014169" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;puerta&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8263722836312994">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5085290468311996" type="plataforma">
+                            <param id="0" name="Object">controlDeTapaTanque</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2771363231914909" type="controlDeTapaTanque">
+                            <param id="0" name="Instance variable">abajo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="9563847772749525" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6542895316977385" type="plataforma">
+                            <param id="0" name="Instance variable">Abajo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9709230151699123" type="plataforma">
+                            <param id="0" name="Instance variable">Arriba</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7465018604807612">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="4757693487827834" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">lugarControlAscensor</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5143018627095376" type="lugarControlAscensor">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6900717461494746" type="plataforma">
+                            <param id="0" name="Instance variable">Arriba</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6951240168307593" type="plataforma">
+                            <param id="0" name="Instance variable">Abajo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="9191969632466495" type="plataforma">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

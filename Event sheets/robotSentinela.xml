@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>robotSentinela</name>
+    <events>
+        <event-group description="" sid="9093612132905631" title="robotCentinela">
+            <sub-events>
+                <event-block sid="9144251715166203">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="7160366020413507" type="robotCentinela" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1798253315883087">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="556043018520155" type="robotCentinela">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="8556679635890658" type="robotCentinela">
+                                    <param id="0" name="Object">robotControl</param>
+                                    <param id="1" name="Layer">robotCentinela.LayerNumber</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="8334020853286046" type="robotCentinela">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7608101365388636">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="8154719635962816" type="robotCentinela">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="3082155779242772" type="robotCentinela">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9280635084765766">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="9458567277079433" type="robotCentinela">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="5246235627029812" type="robotCentinela">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7970605968830667">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="7513355292291943" type="robotCentinela">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="8063017089879905" type="robotCentinela">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8596999197714851">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6665595324828027" type="robotCentinela">
+                            <param id="0" name="Object">personaje_14</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7281111636676988" type="robotCentinela">
+                            <param id="0" name="Instance variable">mata</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8677073095400012" type="Function">
+                            <param id="0" name="Name">&quot;matarPJ14&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3667861850913336">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="508036798579152" type="balaRobotCentinela">
+                            <param id="0" name="Object">personaje_14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1313370500805928" type="Function">
+                            <param id="0" name="Name">&quot;matarPJ14&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9336605628063213" type="balaRobotCentinela" />
+                    </actions>
+                </event-block>
+                <event-block sid="582382645784498">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7836309051053476" type="robotCentinela">
+                            <param id="0" name="Object">personaje_30</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5706158263500977" type="robotCentinela">
+                            <param id="0" name="Instance variable">mata</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3048698369979379" type="Function">
+                            <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1604301577133543">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7248670886582833" type="balaRobotCentinela">
+                            <param id="0" name="Object">personaje_30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6957495449798472" type="Function">
+                            <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="685307617053734" type="balaRobotCentinela" />
+                    </actions>
+                </event-block>
+                <event-block sid="9288255371752936">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3297666857284217" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8408991654682653">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="7229794265721278" type="personaje_30">
+                                    <param id="0" name="Object">robotControl</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="5117490552837562" type="robotCentinela">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="8609026517835401" type="robotCentinela">
+                                    <param id="0" name="Object">balaRobotCentinela</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="8436272633458304" type="balaRobotCentinela">
+                                    <param id="0" name="Angle">135</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="1989722538506597" type="robotCentinela">
+                                    <param id="0" name="Object">balaRobotCentinela</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="2651014622888964" type="balaRobotCentinela">
+                                    <param id="0" name="Angle">45</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1837612162682251">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="1987938076886754" type="System">
+                                            <param id="0" name="Interval (seconds)">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="581375341965118" type="Function">
+                                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;centinela&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Mover el robot a la derecha</comment>
+                <event-block sid="8852781602752722">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9589294837957419" type="robotCentinela">
+                            <param id="0" name="Object">robotIrDerecha</param>
+                        </condition>
+                        <condition disabled="1" id="-7" name="Compare instance variable" sid="6911733043680822" type="controlDeTapaTanque">
+                            <param id="0" name="Instance variable">derecha</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4158456723193148" type="robotCentinela">
+                            <param id="0" name="Instance variable">derecha</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="374957226509424" type="robotCentinela">
+                            <param id="0" name="Instance variable">izquierda</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8907435569954175">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2571309388843127" type="robotCentinela">
+                            <param id="0" name="Instance variable">derecha</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="8976145176232807" type="robotCentinela">
+                            <param id="0" name="Angle">0</param>
+                            <param id="1" name="Distance">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Mover el robot a la izquierda</comment>
+                <event-block sid="779036851282375">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1157410948999867" type="robotCentinela">
+                            <param id="0" name="Object">robotIrIzquierda</param>
+                        </condition>
+                        <condition disabled="1" id="-7" name="Compare instance variable" sid="5706955632882095" type="controlDeTapaTanque">
+                            <param id="0" name="Instance variable">izquierda</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7092255465829501" type="robotCentinela">
+                            <param id="0" name="Instance variable">izquierda</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1391949968039641" type="robotCentinela">
+                            <param id="0" name="Instance variable">derecha</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2414419466492298">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8902650845665979" type="robotCentinela">
+                            <param id="0" name="Instance variable">izquierda</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="2120010595356568" type="robotCentinela">
+                            <param id="0" name="Angle">180</param>
+                            <param id="1" name="Distance">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9342762642448836">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7852699388123775" type="robotCentinela">
+                            <param id="0" name="Object">destruiRobot</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="2674785657701777" type="robotCentinela">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8376827219828678" type="robotCentinela">
+                            <param id="0" name="Instance variable">izquierda</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2675152444339333" type="robotCentinela">
+                            <param id="0" name="Instance variable">derecha</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2286423507905541" type="robotCentinela">
+                            <param id="0" name="Instance variable">mata</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

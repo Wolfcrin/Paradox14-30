@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>maquinaCreaPollos</name>
+    <events>
+        <comment>codigo de la planta carnibora</comment>
+        <include>plantaCarnibora</include>
+        <comment>cuando se crea la maquina, mira si crea o no pesticidas</comment>
+        <event-block sid="6107594243318681">
+            <conditions>
+                <condition id="-18" name="On created" sid="3395141205564879" type="creaPollos" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="185397299556005" type="creaPollos">
+                    <param id="0" name="Instance variable">crearPesticida</param>
+                    <param id="1" name="Value">lvl2Control.Lvl2_zona2_plantaEnvenenada</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>cada x +2 segundo se crea una composta, si la maquna esta activa</comment>
+        <event-block sid="3612274419847156">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4839876004031564" type="System">
+                    <param id="0" name="Interval (seconds)">floor(random(5))+2</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="8033647954555137" type="botonOn">
+                    <param id="0" name="Instance variable">activo</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5810416503099735" type="creaPollos">
+                    <param id="0" name="Instance variable">crearPesticida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2503579498129128" type="creaPollos">
+                    <param id="0" name="Object">composta</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7032579105181753">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2786704062614609" type="System">
+                    <param id="0" name="Interval (seconds)">floor(random(5))+2</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3552010404109396" type="botonOn">
+                    <param id="0" name="Instance variable">activo</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="8429779663549277" type="creaPollos">
+                    <param id="0" name="Instance variable">crearPesticida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2114104916085442" type="creaPollos">
+                    <param id="0" name="Object">compostaEnvenenada</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>si la bosta toca la cinta se mueve para ir al horno</comment>
+        <event-block sid="6098290004126029">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="79890320096238" type="composta">
+                    <param id="0" name="Object">cintaTransportadora</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="9386282579341101" type="composta">
+                    <param id="0" name="Angle">0</param>
+                    <param id="1" name="Distance">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2259813157683534">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8705375566562721" type="compostaEnvenenada">
+                    <param id="0" name="Object">cintaTransportadora</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="1194727880394941" type="compostaEnvenenada">
+                    <param id="0" name="Angle">0</param>
+                    <param id="1" name="Distance">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>si la composta toca el horno se convierte en patas de pollo </comment>
+        <event-block sid="7500887961279174">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4435012395432846" type="composta">
+                    <param id="0" name="Object">cocinadorDepollo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9789139455220667" type="composta" />
+                <action id="0" name="Spawn another object" sid="7789044636862157" type="cocinadorDepollo">
+                    <param id="0" name="Object">pataDepollo</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="2529487238654555" type="pataDepollo">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">cocinadorDepollo</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="5728827051189425" type="cocinadorDepollo">
+                    <param id="0" name="Object">pataDepollo</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-29" name="Move to object" sid="663399118626337" type="pataDepollo">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">cocinadorDepollo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8218383365272565">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2766460213249934" type="compostaEnvenenada">
+                    <param id="0" name="Object">cocinadorDepollo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6847185634982545" type="compostaEnvenenada" />
+                <action id="0" name="Spawn another object" sid="9747674957756474" type="cocinadorDepollo">
+                    <param id="0" name="Object">pataDepollo2</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="14999827933899" type="pataDepollo2">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">cocinadorDepollo</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1716728010864901" type="cocinadorDepollo">
+                    <param id="0" name="Object">pataDepollo2</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-29" name="Move to object" sid="9055702682019806" type="pataDepollo2">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">cocinadorDepollo</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>activar o desactivar la maquina crea pollos</comment>
+        <event-block sid="200806460059275">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6578659803808049" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">botonOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="8646701064654179" type="botonOn">
+                    <param id="0" name="Instance variable">activo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3240929544297259">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="9579517499400411" type="botonOn">
+                    <param id="0" name="Instance variable">activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="130431753847974" type="botonOn">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="7754835468464966" type="creaPollos">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="5308108033312423" type="cocinadorDepollo">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="1189234369843259" type="lvl2Control">
+                    <param id="0" name="Instance variable">Lvl2_zona3_plantaMutante</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3321800910389515">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="611788338791018" type="botonOn">
+                    <param id="0" name="Instance variable">activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="4718423802982795" type="botonOn">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="3110577421851009" type="creaPollos">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="9110379855404675" type="cocinadorDepollo">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="554444982365231" type="lvl2Control">
+                    <param id="0" name="Instance variable">Lvl2_zona3_plantaMutante</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Quien come la patita, pues la planta hambreada mutante :)</comment>
+        <event-block sid="9434311696565445">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7927252230623043" type="pataDepollo">
+                    <param id="0" name="Object">plantaCarniboraMoustrosa</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8637323184267673" type="pataDepollo" />
+            </actions>
+        </event-block>
+        <comment>cuando la mutante come la patita contaminada se muere :( q triste</comment>
+        <event-block sid="9232593841732009">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8378367341660693" type="pataDepollo2">
+                    <param id="0" name="Object">plantaCarniboraMoustrosa</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="511275535678387" type="pataDepollo2" />
+                <action id="4" name="Set animation" sid="4523890670713618" type="plantaCarniboraMoustrosa">
+                    <param id="0" name="Animation">&quot;muerta&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="2" name="Stop" sid="8442143117819982" type="pulpo" />
+                <action id="-10" name="Set value" sid="1415659490663406" type="lvl2Control">
+                    <param id="0" name="Instance variable">Lvl2_zona2_plantaEnvenenada</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" sid="2413570279867065" title="Pesticida">
+            <sub-events>
+                <event-block sid="3219966809679623">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7756456665180866" type="ingredientePesticida">
+                            <param id="0" name="Object">creaPollos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5894711257119958" type="creaPollos">
+                            <param id="0" name="Instance variable">crearPesticida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="9111760847025275" type="creaPollos">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="5157606567779627" type="ingredientePesticida">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3629220180850144" type="ingredientePesticida">
+                            <param id="0" name="Instance variable">DragDropEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="859159018394544" type="ingredientePesticida">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="622488144233673" type="ingredientePesticida">
+                            <param id="0" name="Instance variable">colisionEnabled</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5401941442286413" type="ingredientePesticida">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7463057291794716" type="ingredientePesticida">
+                            <param id="0" name="Instance variable">visible</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

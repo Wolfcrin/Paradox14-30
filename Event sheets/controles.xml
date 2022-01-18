@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>controles</name>
+    <events>
+        <include>audio</include>
+        <event-block sid="2813674610973762">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2023067732085386" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2153287581979537">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5261195533332262" type="System">
+                            <param id="0" name="Variable">idiomaEspañol</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5949706408085308">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8640345617873222" type="txtControles">
+                                    <param id="0" name="Unique ID">752</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2302140582478284" type="txtControles">
+                                    <param id="0" name="Text">&quot;Arrastra el icono luego sueltalo para crear el objeto&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="160155331560228">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="249641174016352" type="txtControles">
+                                    <param id="0" name="Unique ID">776</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6362647251606061" type="txtControles">
+                                    <param id="0" name="Text">&quot;Sonido (si/no)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7926339267334553">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8879709989921886" type="txtControles">
+                                    <param id="0" name="Unique ID">779</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9604591593315759" type="txtControles">
+                                    <param id="0" name="Text">&quot;Música (si/no)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="309078202220379">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="7628228288199478" type="txtControles">
+                                    <param id="0" name="Unique ID">782</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1640958009167691" type="txtControles">
+                                    <param id="0" name="Text">&quot;Guardar&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7001080793881211">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="7068328284956732" type="txtControles">
+                                    <param id="0" name="Unique ID">784</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6383492915350949" type="txtControles">
+                                    <param id="0" name="Text">&quot;Cargar&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6055686739971614">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="9125312176632006" type="txtControles">
+                                    <param id="0" name="Unique ID">837</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5807436089396783" type="txtControles">
+                                    <param id="0" name="Text">&quot;Mostrar opciones&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8118479297732994">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="5179691462203399" type="txtControles">
+                                    <param id="0" name="Unique ID">769</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="7612277954238648" type="txtControles">
+                                    <param id="0" name="Text">&quot;Opciones&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2604752613342368">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="5502860016131584" type="txtControles">
+                                    <param id="0" name="Unique ID">771</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="696752662525519" type="txtControles">
+                                    <param id="0" name="Text">&quot;Ir al menú&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2189865887262482">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="3702555526358484" type="txtControles">
+                                    <param id="0" name="Unique ID">786</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3973963571731273" type="txtControles">
+                                    <param id="0" name="Text">&quot;Ocultar opciones&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2803760335300511">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="976925729525202" type="txtControles">
+                                    <param id="0" name="Unique ID">770</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9030559163213863" type="txtControles">
+                                    <param id="0" name="Text">&quot;Ir al pasado (2014) o al futuro (2030)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8531090467802014">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="3445273312065123" type="txtControles">
+                                    <param id="0" name="Unique ID">751</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1353133421395469" type="txtControles">
+                                    <param id="0" name="Text">&quot;Guardar objetos en el inventario&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9084619170298379">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="4394254676394943" type="txtControles">
+                                    <param id="0" name="Unique ID">748</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="93538794461058" type="txtControles">
+                                    <param id="0" name="Text">&quot;O&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3212253922933406">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="1245292678639966" type="txtControles">
+                                    <param id="0" name="Unique ID">804</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3605613059396154" type="txtControles">
+                                    <param id="0" name="Text">&quot;O&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9263807991536539">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8259732000569828" type="txtControles">
+                                    <param id="0" name="Unique ID">840</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="4431189844285131" type="txtControles">
+                                    <param id="0" name="Text">&quot;En el año 2014 fuiste reclutado para trabajar en una instalación experimental donde se prueba tecnología para el futuro. &#x0D;&#x0A;Tú perteneces al proyecto Paradox 14/30, un proyecto de criogenia y comunicación con el futuro 2030.&#x0D;&#x0A;&#x0D;&#x0A;Ayuda a tu futuro yo, cambiando cosas del pasado.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6253997090349947">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9365880474182284" type="System">
+                    <param id="0" name="Variable">idiomaEspañol</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9994846787106942">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="6495499837014628" type="txtControles">
+                            <param id="0" name="Unique ID">752</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2867551963115967" type="txtControles">
+                            <param id="0" name="Text">&quot;Drag the icon, release to create the object&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8572375176001041">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="6798456075186116" type="txtControles">
+                            <param id="0" name="Unique ID">776</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="9051378274596148" type="txtControles">
+                            <param id="0" name="Text">&quot;Sound (yes/no)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6638197201660112">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="1763777753128303" type="txtControles">
+                            <param id="0" name="Unique ID">779</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7122737921786795" type="txtControles">
+                            <param id="0" name="Text">&quot;Music (yes / no)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="817153483592949">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="6028776604107448" type="txtControles">
+                            <param id="0" name="Unique ID">782</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5436409610057461" type="txtControles">
+                            <param id="0" name="Text">&quot;Save&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5772367917916596">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="2934443347636676" type="txtControles">
+                            <param id="0" name="Unique ID">784</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2672918147617927" type="txtControles">
+                            <param id="0" name="Text">&quot;Load &quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8467206112313568">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="2620386399730985" type="txtControles">
+                            <param id="0" name="Unique ID">837</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="363213678600354" type="txtControles">
+                            <param id="0" name="Text">&quot;Show options&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3022182223691523">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="9686752796925366" type="txtControles">
+                            <param id="0" name="Unique ID">769</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8913974706940957" type="txtControles">
+                            <param id="0" name="Text">&quot;Options&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7970165924055578">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="7497583949148016" type="txtControles">
+                            <param id="0" name="Unique ID">771</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8396322678241637" type="txtControles">
+                            <param id="0" name="Text">&quot;Go to menu &quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8615467375301387">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="5724962833123262" type="txtControles">
+                            <param id="0" name="Unique ID">786</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7709065001985357" type="txtControles">
+                            <param id="0" name="Text">&quot;Hide options&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="236258115226495">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="6570600583350916" type="txtControles">
+                            <param id="0" name="Unique ID">770</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7398502033437977" type="txtControles">
+                            <param id="0" name="Text">&quot;Go of the Past (2014) or the future (2030)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9131403066791188">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="9140658093266388" type="txtControles">
+                            <param id="0" name="Unique ID">751</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6673247664298688" type="txtControles">
+                            <param id="0" name="Text">&quot;Save objects in the inventory &quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4076599414545284">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="7002497214154577" type="txtControles">
+                            <param id="0" name="Unique ID">748</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6544744279209321" type="txtControles">
+                            <param id="0" name="Text">&quot;Or&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4030701544886264">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="4322434350687482" type="txtControles">
+                            <param id="0" name="Unique ID">804</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3365355885461359" type="txtControles">
+                            <param id="0" name="Text">&quot;Or&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4553991379205013">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="5630332209739993" type="txtControles">
+                            <param id="0" name="Unique ID">840</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4810189457375818" type="txtControles">
+                            <param id="0" name="Text">&quot;In 2014 you were recruited to work in a facility where experimental technology for future testing. You belong to Paradox 14/30 project, a project of cryogenics and communication with future 2030. &#x0D;&#x0A;&#x0D;&#x0A;Help your future, changing things of the past.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4487596133424737">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1019728321973147" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_irhistoria</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="102881226637764" type="btn_irhistoria">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="1726124356521929" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="65806738948672" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="2790777366703768" type="btn_irhistoria">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="4964157021239592" type="btn_volverMenu">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="8479047156569765" type="btn_volverControles">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="6662927993701631" type="Function">
+                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6720428989358774">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3740468481404493" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_volverControles</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="8985898708037119" type="btn_volverControles">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="9013103557016094" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="6472395389804517" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="5335500654664351" type="btn_irhistoria">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7437793900966141" type="btn_volverMenu">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="2131825551904961" type="btn_volverControles">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="290286173164826" type="Function">
+                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1325268317684793">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9166222333067724" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_volverMenu</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="8588518852638858" type="btn_volverMenu">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="596047233043764" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="0" name="Call function" sid="6531429813446962" type="Function">
+                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

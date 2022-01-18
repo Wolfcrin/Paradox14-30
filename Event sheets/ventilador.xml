@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ventilador</name>
+    <events>
+        <comment>Lo que hace que gire mas rapido es la variable -&gt; angulo_de_giro</comment>
+        <event-block sid="5632784715779374">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7647742500898307" type="ventilador">
+                    <param id="0" name="Object">Sprite6</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3799276424652131" type="ventilador">
+                    <param id="0" name="Instance variable">seCae</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1246070859327061" type="ventilador">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="9212658806002219" type="ventilador">
+                    <param id="0" name="Instance variable">seCae</param>
+                    <param id="1" name="Value">&quot;no&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="8759387565463857" title="girar">
+            <sub-events>
+                <event-block sid="2326175001166887">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="2867100083751619" type="System">
+                            <param id="0" name="Interval (seconds)">ventilador.velocidad_De_giro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="7354506542844611" type="ventilador">
+                            <param id="0" name="Degrees">ventilador.angulo_de_giro</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3653854985885543" title="mover">
+            <sub-events>
+                <event-block sid="1287081602117403">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3386377117904788" type="ventilador">
+                            <param id="0" name="Instance variable">seCae</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="321083437739303" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="7337529071870328" type="ventilador">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7774808925729703" type="System">
+                            <param id="0" name="Group name">&quot;girar&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3354720619144978">
+            <conditions>
+                <condition id="-18" name="On created" sid="373536309914602" type="ventilador" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="0" name="Spawn another object" sid="934890958878965" type="ventilador">
+                    <param id="0" name="Object">base_ventilador</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="689360396230402" type="base_ventilador">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">ventilador</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>valvula</name>
+    <events>
+        <comment>Si la llave inglesa esta sobre la valvula, hacemos que gire, ademas si el objeto es interactivo</comment>
+        <event-block sid="2261193324498447">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="3713237476368564" type="valvula">
+                    <param id="0" name="Object">llaveInglesa</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9916734361998114" type="valvula">
+                    <param id="0" name="Instance variable">sobreSoporteDeGiro</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9179361126394245" type="valvula">
+                    <param id="0" name="Instance variable">interactivo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="9674830693083269" type="valvula">
+                    <param id="0" name="Degrees">5</param>
+                </action>
+                <action behavior="DragDrop2" id="0" name="Set enabled" sid="7526673865073241" type="llaveInglesa">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="5795981204709709" type="llaveInglesa">
+                    <param id="0" name="Object">valvula</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="6744003613468548" type="llaveInglesa">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">valvula</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>si la llave esta sobre la valvula ademas, no es interactivo, hacemos que gire para dar efectos</comment>
+        <event-block sid="4220160695021286">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6141692471756853" type="llaveInglesa">
+                    <param id="0" name="Object">valvula</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="6503605743371364" type="valvula">
+                    <param id="0" name="Instance variable">interactivo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;no&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="9240750882273076" type="valvula">
+                    <param id="0" name="Degrees">5</param>
+                </action>
+                <action id="-10" name="Set value" sid="5957756761210982" type="valvula">
+                    <param id="0" name="Instance variable">girando</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9333170591446756">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8560753413596143" type="valvula">
+                    <param id="0" name="Instance variable">girando</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="8140133953810876" type="valvula">
+                    <param id="0" name="Degrees">5</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

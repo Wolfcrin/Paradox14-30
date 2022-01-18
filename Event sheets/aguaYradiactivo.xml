@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>aguaYradiactivo</name>
+    <events>
+        <comment>Agua</comment>
+        <event-block sid="9256562815168967">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9818867840624607" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4600997889535795" type="creadorDeAgua">
+                    <param id="0" name="Object">gota1</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2978100347158307">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="506059291586992" type="Piso_internos">
+                    <param id="0" name="Object">gota1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="954083539711952" type="gota1" />
+            </actions>
+        </event-block>
+        <event-block sid="763777283807833">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6152153118199048" type="Piso_externos">
+                    <param id="0" name="Object">gota1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5145057244148094" type="gota1" />
+            </actions>
+        </event-block>
+        <event-block sid="9114481247537299">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1823358727694924" type="gota1">
+                    <param id="0" name="Object">hongo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2481308221036039" type="gota1" />
+            </actions>
+        </event-block>
+        <comment>Radiactivo</comment>
+        <event-block sid="1369354672133017">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6768212821773772" type="System">
+                    <param id="0" name="Interval (seconds)">1.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="13752704432688" type="creadorRadiactivo">
+                    <param id="0" name="Object">gotaRadiactiva</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3852070734402977">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1055924522691227" type="Piso_internos">
+                    <param id="0" name="Object">gotaRadiactiva</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8896184557608376" type="gotaRadiactiva" />
+            </actions>
+        </event-block>
+        <event-block sid="9603647188022597">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6060958067608089" type="Piso_externos">
+                    <param id="0" name="Object">gotaRadiactiva</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7098889788686638" type="gotaRadiactiva" />
+            </actions>
+        </event-block>
+        <event-block sid="1702191851897794">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7292316445812404" type="Piso_internos_seCae">
+                    <param id="0" name="Object">gotaRadiactiva</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1113398694803062" type="gotaRadiactiva" />
+            </actions>
+        </event-block>
+        <event-block sid="52664450390122">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9940185194434154" type="gotaRadiactiva">
+                    <param id="0" name="Object">hongo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3557014184312509" type="gotaRadiactiva" />
+            </actions>
+        </event-block>
+        <event-block sid="5163045910315583">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8642155857757914" type="gotaRadiactiva">
+                    <param id="0" name="Object">personaje_14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4468993211054291" type="gotaRadiactiva" />
+                <action id="0" name="Call function" sid="2720945201722815" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ14&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2634384962023647">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2222689325634904" type="gotaRadiactiva">
+                    <param id="0" name="Object">personaje_30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1178238154353664" type="gotaRadiactiva" />
+                <action id="0" name="Call function" sid="4671665095443474" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

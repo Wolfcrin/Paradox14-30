@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>hongo</name>
+    <events>
+        <event-block sid="8816693270313094">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1061705805630225" type="plantaCarnibora">
+                    <param id="0" name="Object">personaje_14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="998098980865758" type="personaje_14">
+                    <param id="0" name="Jump strength">plantaCarnibora.salto</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3918549727273451" type="personaje_14">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="4867689159121553" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="4167898068548392" type="personaje_14">
+                    <param id="0" name="Jump strength">550</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9562467991731068">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1865214872065701" type="plantaCarnibora">
+                    <param id="0" name="Object">personaje_30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="3247869154291129" type="personaje_30">
+                    <param id="0" name="Jump strength">plantaCarnibora.salto</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="9821361474953288" type="personaje_30">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="3600899788523636" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="6433575200423623" type="personaje_30">
+                    <param id="0" name="Jump strength">550</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>hongo1</comment>
+        <event-group description="" sid="6486650183093012" title="HONGO 1">
+            <sub-events>
+                <event-block sid="6014488095617521">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9509082804503147" type="hongo">
+                            <param id="0" name="Object">personaje_14</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="3803638779272138" type="hongo">
+                            <param id="0" name="Object">tierra</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="515885839335261" type="hongo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2183971781490355" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;hongo&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="5622471519084155" type="hongo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="2714756118451961" type="hongo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="9139908648182615" type="personaje_14">
+                            <param id="0" name="Jump strength">hongo.salto</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4561296612738402" type="personaje_14">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7992989900233198" type="System">
+                            <param id="0" name="Seconds">0.7</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="8893875017375604" type="personaje_14">
+                            <param id="0" name="Jump strength">550</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="7942944171984795" type="hongo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6774388974416929">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="235950793007229" type="hongo">
+                            <param id="0" name="Object">personaje_30</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="7830445511222177" type="hongo">
+                            <param id="0" name="Object">tierra</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="7278480383263191" type="hongo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9173332185442343" type="Function">
+                            <param id="0" name="Name">&quot;sonido&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;hongo&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="6998369127875655" type="hongo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="1968294535020478" type="hongo">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="8801055005994348" type="personaje_30">
+                            <param id="0" name="Jump strength">hongo.salto+50</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="2631075791313623" type="personaje_30">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4404366558039596" type="System">
+                            <param id="0" name="Seconds">0.7</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="344041854478801" type="hongo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="2119276043748793" type="personaje_30">
+                            <param id="0" name="Jump strength">550</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>cuando tocamos el hongo con la pala o con la tijera, se achica y lo podemos llevar</comment>
+                <event-block sid="4525706591928913">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2223039465235707" type="pala">
+                            <param id="0" name="Object">hongo</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="8095100635730271" type="hongo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="6556113227641513" type="hongo">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7751021919096041" type="hongo">
+                            <param id="0" name="Angle">20</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="5137657458231235" type="hongo">
+                            <param id="0" name="Scale">0.5</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="5627764150096946" type="hongo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7862701334803947" type="hongo">
+                            <param id="0" name="Instance variable">salto</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="3974964945913685" type="hongo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="2631758685501076" type="hongo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="6734947627384807" type="hongo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>cuando soltamos el hongo si esta tocano la tierra</comment>
+                <event-block sid="583971371109737">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="9115177875308509" type="hongo" />
+                        <condition id="3" name="Compare frame" sid="8076727475952101" type="hongo">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="7523541392792329" type="hongo">
+                            <param id="0" name="Object">tierra</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="2941659872998128" type="hongo">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="5667312957026253" type="hongo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="2689465672168255" type="hongo">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="6780582794701706" type="hongo">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="6217857430649721" type="hongo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2683085322870087" type="hongo">
+                            <param id="0" name="Instance variable">salto</param>
+                            <param id="1" name="Value">1000</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="7917792439802197" type="hongo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="426640410359919" type="hongo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="5205515179739776">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2237986709292764" type="hongo">
+                    <param id="0" name="Object">restriccionCaja</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="1" name="Drop" sid="807560763778206" type="hongo" />
+                <action id="-3" name="Set position" sid="2257081111325128" type="hongo">
+                    <param id="0" name="X">hongo.X</param>
+                    <param id="1" name="Y">hongo.Y+30</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

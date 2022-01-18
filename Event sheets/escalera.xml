@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>escalera</name>
+    <events>
+        <event-group description="" inactive="1" sid="4195028313691257" title="escalera 14">
+            <sub-events>
+                <event-block collapsed="1" sid="2234639033795456">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="8366364213637661" type="Escalera_invisible">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">300</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="193083456806515" type="personaje_14">
+                            <param id="0" name="Instance variable">subiendoEscalera</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3596518668012388">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="19038354133569" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4354133973579008" type="Escalera_invisible" />
+                                <action id="-10" name="Set value" sid="6784773972568239" type="personaje_14">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3829234530734748">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="638753648921518" type="personaje_14">
+                            <param id="0" name="Instance variable">subiendoEscalera</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="5995474301211248" type="personaje_14">
+                            <param id="0" name="Gravity">1500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7445733786710363">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4356681680156883" type="personaje_14">
+                            <param id="0" name="Instance variable">subiendoEscalera</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="9838245142872079" type="personaje_14">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="6166708177583642" type="personaje_14">
+                            <param id="0" name="Gravity">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="6493583581268164">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="7799849452642671" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="5941220633309875" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="1562890089700831" type="personaje_14">
+                                    <param id="0" name="Vector Y">-90</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="8437104204232127" type="personaje_14">
+                                    <param id="0" name="Animation">&quot;subiendo_escalera&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="3882075152400637">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="43194457905125" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="4661856827975049" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="3222434846063675" type="personaje_14">
+                                    <param id="0" name="Vector Y">90</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="8747343500402841" type="personaje_14">
+                                    <param id="0" name="Animation">&quot;subiendo_escalera&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5236677251756391">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="6764905380541939" type="Keyboard">
+                                    <param id="0" name="Key">16 (Mayusculas)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5343147788523384" type="personaje_14">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="6003617676367774" type="personaje_14">
+                                    <param id="0" name="Vector Y">-500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1883851163811451">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="1180462709608426" type="personaje_14">
+                                    <param id="0" name="Object">escalera</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3819882783052358" type="personaje_14">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4733534555802765">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2639306673215334" type="personaje_14">
+                            <param id="0" name="Object">escalera</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="1573314298608963">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="699305029617139" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="6941201864727264" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="7124845008369127" type="personaje_14">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1972694235187953" type="personaje_14">
+                                    <param id="0" name="Animation">&quot;subiendo_escalera&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="1918576275252934">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="8576502273149883" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="4546690639712707" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4725147411833496" type="personaje_14">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6464030924235507" type="personaje_14">
+                                    <param id="0" name="Animation">&quot;subiendo_escalera&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5969733825801056">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1289976519669313" type="System">
+                            <param id="0" name="First value">Personaje_14.Y+Personaje_14.Height/2</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">escalera.Y-escalera.Height/2-4</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="5494027515746566" type="System">
+                            <param id="0" name="First value">Escalera_invisible.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">escalera.Count</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="6014694572235651" type="escalera">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">personaje_14.X</param>
+                            <param id="2" name="Y">personaje_14.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8836758113523256" type="System">
+                            <param id="0" name="Object to create">Escalera_invisible</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">escalera.X</param>
+                            <param id="3" name="Y">escalera.Y-escalera.Height/2</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="9933278776277662" type="Escalera_invisible">
+                            <param id="0" name="Height">45</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="2600070792665522" type="Escalera_invisible">
+                            <param id="0" name="Width">45</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8257090189376429" type="Escalera_invisible">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="1653395280588118" title="escalera 30">
+            <sub-events>
+                <event-block sid="5282236495275052">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="6873893732273192" type="Escalera_invisible">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">300</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2336164125772141" type="personaje_30">
+                            <param id="0" name="Instance variable">subiendoEscalera</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="1397458796754732">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="2513033834171683" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="8401514895505683" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="6345752091694831" type="Escalera_invisible" />
+                                <action id="-10" name="Set value" sid="9764858982199018" type="personaje_30">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="653674622618102">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9836116895865501" type="personaje_30">
+                            <param id="0" name="Instance variable">subiendoEscalera</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="1768219852249741" type="personaje_30">
+                            <param id="0" name="Gravity">1500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="409570469535839">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="5474363765146905" type="personaje_30">
+                            <param id="0" name="Object">escalera</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="1749217611739916">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="1366748135075991" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="515225805887666" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8553561843944261" type="personaje_30">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9846414063329875" type="personaje_30">
+                                    <param id="0" name="Animation">&quot;subiendo_escalera&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="6403238872408293">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="1165340581513221" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="8205828162074747" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8163086306989802" type="personaje_30">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9427190514943978" type="personaje_30">
+                                    <param id="0" name="Animation">&quot;subiendo_escalera&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2950237930575527">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6182943017632723" type="personaje_30">
+                            <param id="0" name="Instance variable">subiendoEscalera</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="9655306490371659" type="personaje_30">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="3875301746717933" type="personaje_30">
+                            <param id="0" name="Gravity">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="9850223383495983">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="9067420283447026" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="8062711267342916" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="9960538684321234" type="personaje_30">
+                                    <param id="0" name="Vector Y">-90</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="7232225863514943" type="personaje_30">
+                                    <param id="0" name="Animation">&quot;subiendo_escalera&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="8946070143095326">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="3247589513562134" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="6228470371020474" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="5792990596447855" type="personaje_30">
+                                    <param id="0" name="Vector Y">90</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1245976516758432" type="personaje_30">
+                                    <param id="0" name="Animation">&quot;subiendo_escalera&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8464865734820264">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="9700738286205008" type="Keyboard">
+                                    <param id="0" name="Key">16 (Mayusculas)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="9766596657449539" type="personaje_30">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="9131705076665791" type="personaje_30">
+                                    <param id="0" name="Vector Y">-500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="539893832535136">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="8894614091885879" type="personaje_30">
+                                    <param id="0" name="Object">escalera</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1555786720776707" type="personaje_30">
+                                    <param id="0" name="Instance variable">subiendoEscalera</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2299023902926694">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2240347013103264" type="System">
+                            <param id="0" name="First value">Personaje_30.Y+Personaje_30.Height/2</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">escalera.Y-escalera.Height/2-4</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="5351665236472432" type="System">
+                            <param id="0" name="First value">Escalera_invisible.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">escalera.Count</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="7883307828087347" type="escalera">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">personaje_30.X</param>
+                            <param id="2" name="Y">personaje_30.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5366872295668967" type="System">
+                            <param id="0" name="Object to create">Escalera_invisible</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">escalera.X</param>
+                            <param id="3" name="Y">escalera.Y-escalera.Height/2</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="7486903196412002" type="Escalera_invisible">
+                            <param id="0" name="Height">45</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="6481739771609608" type="Escalera_invisible">
+                            <param id="0" name="Width">45</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7650177923707063" type="Escalera_invisible">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="7539678204556567">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4003994940693145" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6302241362873095">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6110750472159976" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2014</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="7364720931595535" type="System">
+                            <param id="0" name="Group name">&quot;escalera 14&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1991551002150779">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7291883128481915" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2030</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="7937883214043347" type="System">
+                            <param id="0" name="Group name">&quot;escalera 30&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

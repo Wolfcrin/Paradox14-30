@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>presentacion</name>
+    <events>
+        <event-block sid="284482076821061">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7914396688511536" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="6869764655601431" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="9096781749504588" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="118822219496272" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1371531134631958" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="7898928856179591" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="722725939282798" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

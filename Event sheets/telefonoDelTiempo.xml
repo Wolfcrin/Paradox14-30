@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>telefonoDelTiempo</name>
+    <events>
+        <variable constant="0" name="AQNivel2030" sid="2270364055488581" static="0" type="text"></variable>
+        <variable constant="0" name="AQNivel2014" sid="6257788119999448" static="0" type="text"></variable>
+        <event-block sid="6625495785023507">
+            <conditions>
+                <condition id="-18" name="On created" sid="8747174016299726" type="telefonoDelTiempo" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="247071265378719" type="telefonoDelTiempo">
+                    <param id="0" name="Instance variable">Anio</param>
+                    <param id="1" name="Value">reloj_configuracion.fecha_nivel</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="4389111037268272">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5652807226666815" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">telefonoDelTiempo</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="788405517637592" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="8618553526159787" type="Function">
+                    <param id="0" name="Name">&quot;viajar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="252549928506608">
+            <conditions>
+                <condition id="0" name="On function" sid="2829466052533713" type="Function">
+                    <param id="0" name="Name">&quot;viajar&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6352215169959488">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4127281409547075" type="telefonoDelTiempo">
+                            <param id="0" name="Instance variable">Anio</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2014</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9010138623242946" type="Function">
+                            <param id="0" name="Name">&quot;guardarEstado&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="33" name="Stop all" sid="4548004842151612" type="Audio" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5690962150520482">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5043463996085518" type="reloj_configuracion">
+                                    <param id="0" name="Instance variable">lvl</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1847964361359939" type="System">
+                                    <param id="0" name="Variable">LVL1_14_yasecargo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="4700483536193867" type="System">
+                                    <param id="0" name="Layout">AQNivel2030</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2255608520189408">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8331551607460236" type="reloj_configuracion">
+                                    <param id="0" name="Instance variable">lvl</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="9447838139346527" type="lvl2Control">
+                                    <param id="0" name="Instance variable">LVL2_yaSeCargo1Vez_14</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="1873749652260237" type="System">
+                                    <param id="0" name="Layout">AQNivel2030</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2849741962142271">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8105652752936971" type="telefonoDelTiempo">
+                            <param id="0" name="Instance variable">Anio</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2030</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7968921841791818" type="Function">
+                            <param id="0" name="Name">&quot;guardarEstado&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="33" name="Stop all" sid="5809757359198476" type="Audio" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5097485425488445">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="188799747315355" type="reloj_configuracion">
+                                    <param id="0" name="Instance variable">lvl</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="348082521341591" type="System">
+                                    <param id="0" name="Variable">LVL1_30_yasecargo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="6977911627618006" type="System">
+                                    <param id="0" name="Layout">AQNivel2014</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3285443611198892">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8374843450117145" type="reloj_configuracion">
+                                    <param id="0" name="Instance variable">lvl</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6314662646226178" type="lvl2Control">
+                                    <param id="0" name="Instance variable">LVL2_yaseCargo1Vez_30</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="2117869009407784" type="System">
+                                    <param id="0" name="Layout">AQNivel2014</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

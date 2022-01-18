@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>pensamiento</name>
+    <events>
+        <event-group description="" sid="592463919892667" title="pensamiento">
+            <sub-events>
+                <variable constant="0" name="colision" sid="131300100621624" static="1" type="text"></variable>
+                <comment>Cuando se destruye</comment>
+                <event-block sid="4375799895083273">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="3697359379050011" type="pensamiento" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7577437159992929" type="pensamientoIcono" />
+                    </actions>
+                </event-block>
+                <comment>Que icono se creara</comment>
+                <event-block collapsed="1" sid="6728170840037678">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="5716985967806232" type="pensamiento">
+                            <param id="0" name="Animation">&quot;pen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="256125701798075" type="pensamiento">
+                            <param id="0" name="Object">pensamientoIcono</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="5109064379940246" type="pensamientoIcono">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">pensamiento</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="4575234675413612" type="pensamientoIcono">
+                            <param id="0" name="Width">70</param>
+                            <param id="1" name="Height">70</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4000811417397771">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6532694503363237" type="System">
+                                    <param id="0" name="Variable">colision</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;cableCortado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="7994817706665545" type="pensamientoIcono">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6430345039543849" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="9808042473223026" type="pensamiento" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="3758460487746975">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4227151404218749" type="System">
+                                    <param id="0" name="Variable">colision</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;llave&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="7497089647044906" type="pensamientoIcono">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5841666968064274" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4481351896438959" type="pensamiento" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7155853459055338">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7210433295087029" type="System">
+                                    <param id="0" name="Variable">colision</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;cpu&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="6597911908501146" type="pensamientoIcono">
+                                    <param id="0" name="Frame number">6</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1266165725942683" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="9840929097987357" type="pensamiento" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7747556034786314">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="262569006917813" type="System">
+                                    <param id="0" name="Variable">colision</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;ascensor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="668819217210084" type="pensamientoIcono">
+                                    <param id="0" name="Frame number">5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6434945274136906" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="930294525022533" type="pensamiento" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="5407439494367156">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5867232642437819" type="System">
+                                    <param id="0" name="Variable">colision</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;valvula&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="3746739434748792" type="pensamientoIcono">
+                                    <param id="0" name="Frame number">4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4817286207762598" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="8889238536329885" type="pensamiento" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="8284458741873836">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9488378838246396" type="System">
+                                    <param id="0" name="Variable">colision</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;viga&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="255589100427104" type="pensamientoIcono">
+                                    <param id="0" name="Frame number">10</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7658837222668319" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1945710684868447" type="pensamiento" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Colisiones</comment>
+                <event-block sid="8301382421457057">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5895661129115232" type="personaje_14">
+                            <param id="0" name="Object">puerta</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5456803747907387" type="puerta">
+                            <param id="0" name="Instance variable">problemas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="676819410437877" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona1_cable_eletricidad</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4659508970500724" type="pensamiento" />
+                        <action id="0" name="Spawn another object" sid="3802447473637324" type="personaje_14">
+                            <param id="0" name="Object">pensamiento</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="81196813545705" type="System">
+                            <param id="0" name="Variable">colision</param>
+                            <param id="1" name="Value">&quot;cableCortado&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1694548561781038">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1250738897520356" type="personaje_14">
+                            <param id="0" name="Object">valvula</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9708099455025878" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona2_valvulaGirada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9631140550388176" type="valvula">
+                            <param id="0" name="Instance variable">interactivo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8955699657390109" type="personaje_14">
+                            <param id="0" name="Object">pensamiento</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9636981324474393" type="System">
+                            <param id="0" name="Variable">colision</param>
+                            <param id="1" name="Value">&quot;llave&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4072918137267742">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9530146159271451" type="personaje_14">
+                            <param id="0" name="Object">valvula</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2150239609007807" type="valvula">
+                            <param id="0" name="Instance variable">interactivo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;no&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="191664314286597" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona2_hielo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="6494910278945367" type="personaje_14">
+                            <param id="0" name="Object">pensamiento</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1321061774552695" type="System">
+                            <param id="0" name="Variable">colision</param>
+                            <param id="1" name="Value">&quot;llave&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4098909481605454">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4102819753941103" type="personaje_14">
+                            <param id="0" name="Object">lugarControlAscensor</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="3015455088871549" type="lugarControlAscensor">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2562490668770209" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona3_No_regenerar_Mono</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="9622526323988354" type="personaje_14">
+                            <param id="0" name="Object">pensamiento</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4930801727853837" type="System">
+                            <param id="0" name="Variable">colision</param>
+                            <param id="1" name="Value">&quot;cpu&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8588233433956377">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9063165210744169" type="personaje_14">
+                            <param id="0" name="Object">lugarControlAscensor</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6157648601243836" type="lugarControlAscensor">
+                            <param id="0" name="Instance variable">numero</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4432282227979535" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona3_subirAscensor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="7323480913187714" type="personaje_14">
+                            <param id="0" name="Object">pensamiento</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4726491663017857" type="System">
+                            <param id="0" name="Variable">colision</param>
+                            <param id="1" name="Value">&quot;ascensor&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2241785636310205">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9355380936837969" type="personaje_14">
+                            <param id="0" name="Object">ponerAquiValvula</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9380142048607054" type="lvl1Control">
+                            <param id="0" name="Instance variable">LVL1_zona2_valvula_entanque_denitro</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="3527341503836222" type="personaje_14">
+                            <param id="0" name="Object">pensamiento</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8359234796084058" type="System">
+                            <param id="0" name="Variable">colision</param>
+                            <param id="1" name="Value">&quot;valvula&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3298921859415614">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8647332595768796" type="personaje_14">
+                            <param id="0" name="Object">Sprite2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="3136565146406849">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="796430449153948" type="lvl1Control">
+                                    <param id="0" name="Instance variable">LVL1_zona1_viga_de_contencion</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2805436536167363" type="lvl1Control">
+                                    <param id="0" name="Instance variable">LVL1_zona1_viga_de_contencion2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="3318420853034585" type="personaje_14">
+                                    <param id="0" name="Object">pensamiento</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4911171385184889" type="System">
+                                    <param id="0" name="Variable">colision</param>
+                                    <param id="1" name="Value">&quot;viga&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Peneados! no, pineados XD</comment>
+        <event-block sid="5189011279424442">
+            <conditions>
+                <condition id="-18" name="On created" sid="7404164986958918" type="pensamiento" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6839914094288502" type="pensamiento">
+                    <param id="0" name="Pin to">personaje_14</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5444329499410607">
+            <conditions>
+                <condition id="-18" name="On created" sid="6370294513984152" type="pensamientoIcono" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="3790392646713139" type="pensamientoIcono">
+                    <param id="0" name="Pin to">pensamiento</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>martillo</name>
+    <events>
+        <event-block sid="7645268581703435">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="62477907414173" type="martillo">
+                    <param id="0" name="Object">caja</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3612400851009636" type="martillo" />
+                <action id="-9" name="Destroy" sid="4103940894687368" type="caja" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>cojin</name>
+    <events>
+        <comment>cuando el personaje salta en el cojin, aumenta el rango de salto en 1000</comment>
+        <event-block sid="9978697431682747">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2638818107688371" type="personaje_14">
+                    <param id="0" name="Object">cojin</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="4652345229309837" type="cojin" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="1361324466479025" type="personaje_14">
+                    <param id="0" name="Jump strength">cojin.distanciaSalto</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3790522963193254" type="personaje_14">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="911199245841119" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="8528920844254242" type="personaje_14">
+                    <param id="0" name="Jump strength">550</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8952564630839965">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="141055360362935" type="personaje_14">
+                    <param id="0" name="Object">cojin</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="7327767582776288" type="cojin" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="1441224025281984" type="personaje_14">
+                    <param id="0" name="Jump strength">cojin.distanciaSalto</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="7517950099487971" type="personaje_14">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="2556699832446258" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="7729538489101383" type="personaje_14">
+                    <param id="0" name="Jump strength">550</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8656137364344381">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8996148020250046" type="personaje_30">
+                    <param id="0" name="Object">cojin</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="1129940948178105" type="cojin" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="3909250830851599" type="personaje_30">
+                    <param id="0" name="Jump strength">cojin.distanciaSalto</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="1232612115120499" type="personaje_30">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="4975875898784038" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="5127276299150892" type="personaje_30">
+                    <param id="0" name="Jump strength">550</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="556592515136294">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="9634570164068612" type="guardia">
+                    <param id="0" name="Object">cojin</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="7189837358453058" type="cojin" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7843281547446626">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5705657416580675" type="guardia">
+                            <param id="0" name="Instance variable">caminandoDerecha</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="7176831873504205" type="cojin">
+                            <param id="0" name="Angle">0</param>
+                            <param id="1" name="Distance">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6476846936298697">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6581447711178872" type="guardia">
+                            <param id="0" name="Instance variable">caminandoIzquierda</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="5583853758297953" type="cojin">
+                            <param id="0" name="Angle">180</param>
+                            <param id="1" name="Distance">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Si el cojin no esta sobre una superficie como un piso, no funciona. asi evitamos las  trampas&#x0D;&#x0A;como usar el cojin como alfombra voladora.</comment>
+        <event-block any="1" sid="8163405236530653">
+            <conditions>
+                <condition behavior="DragDrop2" id="0" name="Is dragging" sid="8996686310540703" type="cojin" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="7486136402292345" type="cojin">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="2165602592262481" type="cojin">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="7552671841721351" type="cojin">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8971821829228257">
+            <conditions>
+                <condition id="-22" name="Else" sid="9114818048350722" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="488861535601421" type="cojin">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="313625900159595" type="cojin">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="6959468021681887" type="cojin">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2747762189091108">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1889659460647232" type="cojin">
+                    <param id="0" name="Object">caja</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="1392193701154985" type="cojin">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3762808032225869">
+            <conditions>
+                <condition id="-9" inverted="1" name="Is visible" sid="966672151849834" type="cojin" />
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="3748384517985762" type="cojin">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

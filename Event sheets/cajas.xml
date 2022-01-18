@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>cajas</name>
+    <events>
+        <comment>si se esta arratrado, no dejamos que se puede llevar al personaj</comment>
+        <event-block sid="2636020158729651">
+            <conditions>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="2452174601535293" type="caja" />
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="6917804613391533" type="caja">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action behavior="Jumpthru" id="0" name="Set enabled" sid="3615076717353201" type="caja">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="1611130876721004" type="caja">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-24" name="Move to top" sid="1242664119518905" type="caja" />
+            </actions>
+        </event-block>
+        <event-block sid="2618582315690932">
+            <conditions>
+                <condition id="-22" name="Else" sid="8585538524933756" type="System" />
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="2669399651979443" type="caja">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+                <action behavior="Jumpthru" id="0" name="Set enabled" sid="6354908554847084" type="caja">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="9192116080658696" type="caja">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>cuandos se crea la caja, crea su zona de colision</comment>
+        <event-block sid="9825877484534632">
+            <conditions>
+                <condition id="-18" name="On created" sid="1263524455518264" type="caja" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="7768772176313364" type="zonaColisionCaja">
+                    <param id="0" name="Object">caja</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6301812477583014" type="zonaColisionCaja">
+                    <param id="0" name="Pin to">caja</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>cuando la caja colisiona con &quot;restriccionCaja&quot; se suelta, si el objeto esta ala izq, lo mueve para adentro</comment>
+        <event-block sid="5658355447433157">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="5948256893981299" type="zonaColisionCaja">
+                    <param id="0" name="Object">restriccionCaja</param>
+                </condition>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="8195953621117026" type="caja" />
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="1" name="Drop" sid="4621690947000374" type="caja" />
+            </actions>
+            <sub-events>
+                <event-block sid="9034248882208271">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="941492154272563" type="restriccionCaja">
+                            <param id="0" name="Instance variable">izquierda</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="8170518104085977" type="caja">
+                            <param id="0" name="X">caja.X+20</param>
+                            <param id="1" name="Y">caja.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8176449168863299">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5106824649525681" type="restriccionCaja">
+                            <param id="0" name="Instance variable">derecha</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="3877400420151376" type="caja">
+                            <param id="0" name="X">caja.X-50</param>
+                            <param id="1" name="Y">caja.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="537952838396033">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7044660392546142" type="caja">
+                    <param id="0" name="Object">Piso_externos</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="2549239086573472" type="caja">
+                    <param id="0" name="Object">pared1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="1" name="Drop" sid="9165811021313631" type="caja" />
+                <action id="-3" name="Set position" sid="4963364278225843" type="caja">
+                    <param id="0" name="X">caja.X-20</param>
+                    <param id="1" name="Y">caja.Y-20</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

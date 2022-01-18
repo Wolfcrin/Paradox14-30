@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>puerta</name>
+    <events>
+        <event-group description="" sid="5056920733343387" title="Creando">
+            <sub-events>
+                <comment>Guadamos la posiocion y para usarla mas adelante</comment>
+                <event-block sid="8483207837988958">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="3521667498747599" type="puerta" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4154068272401307" type="puerta">
+                            <param id="0" name="Instance variable">posicionY</param>
+                            <param id="1" name="Value">puerta.Y</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2778418543141036" type="puerta">
+                            <param id="0" name="Object">sonidoPuerta</param>
+                            <param id="1" name="Layer">puerta.LayerNumber</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2237113016980903" type="sonidoPuerta">
+                            <param id="0" name="Instance variable">sonido</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5424948365214897" type="puerta">
+                            <param id="0" name="Object">sonidoPuerta</param>
+                            <param id="1" name="Layer">puerta.LayerNumber</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8633050716136018" type="sonidoPuerta">
+                            <param id="0" name="Instance variable">sonido</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>cuando el jugador toca la plataforma, activa para que se levante la puerta</comment>
+                <event-block sid="769323976037205">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9133467458966559" type="personaje_14">
+                            <param id="0" name="Object">check_puerta</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7723728864522225" type="puerta">
+                            <param id="0" name="Instance variable">subiendo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;no&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="168928790287996" type="puerta">
+                            <param id="0" name="Instance variable">subiendo</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6721311588675007">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9891057921180432" type="personaje_30">
+                            <param id="0" name="Object">check_puerta</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4106195769510275" type="puerta">
+                            <param id="0" name="Instance variable">subiendo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;no&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2509663782008417" type="puerta">
+                            <param id="0" name="Instance variable">subiendo</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>si la puerta llega al tope, espera unos segundo y baja</comment>
+                <event-block sid="2522839437073195">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8499518223919708" type="puerta">
+                            <param id="0" name="Instance variable">distanciaSubido</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">puerta.tope</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="240546323612255" type="puerta">
+                            <param id="0" name="Instance variable">subiendo</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8674385237704149" type="System">
+                            <param id="0" name="Seconds">puerta.tiempoAntesDeBajar</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6516376434137185" type="puerta">
+                            <param id="0" name="Instance variable">bajando</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6910217891529406">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1888272647530635" type="puerta">
+                            <param id="0" name="Instance variable">bajando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3155544856365593" type="puerta">
+                            <param id="0" name="Instance variable">posicionY</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">puerta.Y</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3503235520457675" type="puerta">
+                            <param id="0" name="Instance variable">distanciaSubido</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1913600287297618" type="puerta">
+                            <param id="0" name="Instance variable">distanciaSubido</param>
+                            <param id="1" name="Value">self.distanciaSubido-self.tamañoDeSubida</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="3673487926894527" type="puerta">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">puerta.tamañoDeSubida</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>subiendo la puerta.</comment>
+                <event-block sid="8729210482083997">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1461183343261592" type="puerta">
+                            <param id="0" name="Instance variable">subiendo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="9405921884897262" type="System">
+                            <param id="0" name="First value">puerta.y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">puerta.posicionY-puerta.tope</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7481730056734474" type="puerta">
+                            <param id="0" name="Instance variable">bajando</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="759635451211581" type="puerta">
+                            <param id="0" name="Instance variable">distanciaSubido</param>
+                            <param id="1" name="Value">self.distanciaSubido+Self.tamañoDeSubida</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="6825880730296499" type="puerta">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">puerta.tamañoDeSubida</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="2129380397264725">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="5475878571700195" type="Audio">
+                                    <param id="0" name="Tag">&quot;puerta&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6467641375536395" type="System">
+                                    <param id="0" name="Variable">Sonido</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="7419121375921167" type="puerta">
+                                    <param id="0" name="Instance variable">sonido</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="712290263030042" type="Audio">
+                                    <param id="0" name="Audio file">ascensor</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-30</param>
+                                    <param id="1" name="Tag (optional)">&quot;puerta&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="292839863081421" type="Function">
+                                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;puerta&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2755502803563072">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="564969794660009" type="puerta">
+                                    <param id="0" name="Instance variable">sonido</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6977201652485447" type="Function">
+                                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;puerta&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Hacer que la puerta caiga mas rapido, y que tire polvo al tocar el piso.</comment>
+                <event-block sid="8534855364893991">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9660585725330727" type="puerta">
+                            <param id="0" name="Object">sonidoPuerta</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4003130460967835" type="sonidoPuerta">
+                            <param id="0" name="Instance variable">sonido</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="9461010954344258" type="puerta">
+                            <param id="0" name="Instance variable">sonido</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5654239895864997">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2887916337516042" type="puerta">
+                            <param id="0" name="Object">sonidoPuerta</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2702570946521646" type="sonidoPuerta">
+                            <param id="0" name="Instance variable">sonido</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="7238097773196768" type="puerta">
+                            <param id="0" name="Instance variable">sonido</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Personaje_30</name>
+    <events>
+        <variable constant="0" name="personaje_checkBox_Y_30" sid="6467306697042616" static="0" type="number">3000</variable>
+        <variable constant="0" name="personaje_checkBox_X_30" sid="5846753686143655" static="0" type="number">583</variable>
+        <comment>Cuando cargamos por primera vez, cargamos la posicion por si no esta colisionando con ningun checkBox</comment>
+        <event-block sid="7207823103640544">
+            <conditions>
+                <condition id="-18" name="On created" sid="6083872544587894" type="personaje_30" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8589869147233067" type="System">
+                    <param id="0" name="Variable">personaje_checkBox_X_30</param>
+                    <param id="1" name="Value">personaje_30.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="6896983753798962" type="System">
+                    <param id="0" name="Variable">personaje_checkBox_Y_30</param>
+                    <param id="1" name="Value">personaje_30.Y</param>
+                </action>
+                <action id="-24" name="Move to top" sid="6675674406151232" type="personaje_30" />
+            </actions>
+        </event-block>
+        <comment>teclas</comment>
+        <comment>colisiones</comment>
+        <event-block sid="7609403001671488">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9575484509610285" type="personaje_30">
+                    <param id="0" name="Object">check_box</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="256110812859217" type="System">
+                    <param id="0" name="Variable">personaje_checkBox_X_30</param>
+                    <param id="1" name="Value">check_box.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="6146516809332805" type="System">
+                    <param id="0" name="Variable">personaje_checkBox_Y_30</param>
+                    <param id="1" name="Value">check_box.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3865722550466983">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4926905388437315" type="ventilador">
+                    <param id="0" name="Object">personaje_30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="5991030736675139" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>cuando se destruye</comment>
+        <event-block disabled="1" sid="3612979357264121">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="2014976626765813" type="personaje_30" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="5608684958481453" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="3078636593936223" type="System">
+                    <param id="0" name="Object to create">personaje_30</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">personaje_check_box_X</param>
+                    <param id="3" name="Y">personaje_check_box_Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="5509681593260021" title="movimientos2">
+            <sub-events>
+                <comment>cuando preciono las flechas o las teclas, se mueve hacia la direccion y muestra la animacion correspondiente</comment>
+                <event-block any="1" sid="2137225146903358">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="5717214972529138" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="9075135073109498" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4576235587337094" type="personaje_30">
+                            <param id="0" name="Instance variable">asiQLadoMira</param>
+                            <param id="1" name="Value">&quot;der&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="3119678783950871" type="personaje_30">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8580744726310938" type="personaje_30">
+                            <param id="0" name="Animation">&quot;caminando_derecha&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="4592356780234806">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="3792106945800291" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="1212573744103632" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7570276311726717" type="personaje_30">
+                            <param id="0" name="Instance variable">asiQLadoMira</param>
+                            <param id="1" name="Value">&quot;izq&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="2399660096533455" type="personaje_30">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1674395234780023" type="personaje_30">
+                            <param id="0" name="Animation">&quot;caminando_izquierda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>cuando suelto la tecla.</comment>
+                <event-block any="1" sid="5607335084649771">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="275091119717983" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="2878833463401644" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2854993564826479" type="personaje_30">
+                            <param id="0" name="Animation">&quot;parado_izquierda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="8081415336936442">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="521293851010541" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="5255377036756319" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9476500327212747" type="personaje_30">
+                            <param id="0" name="Animation">&quot;parado_derecha&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>cuando apreto las teclas para arriba y la izquierda, cambio la animacion a saltando_izquierda</comment>
+                <event-block sid="8915175641746491">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="9572801739487688" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="9129307595689733" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="241195571986738" type="personaje_30" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1572516020969264" type="personaje_30">
+                            <param id="0" name="Animation">&quot;saltando_izquierda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6287818894819282" type="personaje_30">
+                            <param id="0" name="Instance variable">asiQLadoMira</param>
+                            <param id="1" name="Value">&quot;izq&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3070247360649016">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6385611156535302" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="489745202101422" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="1482500128164116" type="personaje_30" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7450205463524135" type="personaje_30">
+                            <param id="0" name="Animation">&quot;saltando_izquierda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1704263790988931" type="personaje_30">
+                            <param id="0" name="Instance variable">asiQLadoMira</param>
+                            <param id="1" name="Value">&quot;izq&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>cuando apreto las teclas para arriba y la derecha, cambio la animacion a saltando_derecha</comment>
+                <event-block sid="6984889487164274">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="469410489344814" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="2937803833161129" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="1242119466399989" type="personaje_30" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2980719925068067" type="personaje_30">
+                            <param id="0" name="Animation">&quot;saltando_derecha&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8681977469906207" type="personaje_30">
+                            <param id="0" name="Instance variable">asiQLadoMira</param>
+                            <param id="1" name="Value">&quot;der&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7911431474884226">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="3495678900749145" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="2505775997497743" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="7315864683077652" type="personaje_30" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="608429430404358" type="personaje_30">
+                            <param id="0" name="Animation">&quot;saltando_derecha&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3155790233662049" type="personaje_30">
+                            <param id="0" name="Instance variable">asiQLadoMira</param>
+                            <param id="1" name="Value">&quot;der&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>cuando esta callendo, cambia a la animacion parado</comment>
+                <event-block sid="763296692732027">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="1087921749262031" type="personaje_30" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="925084083898422">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5206638444210923" type="personaje_30">
+                                    <param id="0" name="Instance variable">asiQLadoMira</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;izq&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7169547399425648" type="personaje_30">
+                                    <param id="0" name="Animation">&quot;parado_izquierda&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7047632842898253">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6134374767993993" type="personaje_30">
+                                    <param id="0" name="Instance variable">asiQLadoMira</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;der&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9056047129515923" type="personaje_30">
+                                    <param id="0" name="Animation">&quot;parado_derecha&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="4744107989474511">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2127253469372585" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="5203167814097043" type="personaje_30">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7271074129070984">
+            <conditions>
+                <condition id="0" name="On function" sid="3991785208828802" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="3633295678147887" type="personaje_30">
+                    <param id="0" name="Object">muerte</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="1445898454500734" type="personaje_30">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7883494731154582" type="personaje_30">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="146078286754121" type="personaje_30">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="3120111844693106" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="331307346921363" type="personaje_30">
+                    <param id="0" name="X">personaje_checkBox_X_30</param>
+                    <param id="1" name="Y">personaje_checkBox_Y_30</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="9040394370719496" type="personaje_30">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5185110829833695" type="personaje_30">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="4008281856627507" type="personaje_30">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

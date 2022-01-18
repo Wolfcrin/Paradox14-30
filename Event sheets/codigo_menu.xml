@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>codigo_menu</name>
+    <events>
+        <variable constant="0" name="MenuJuegoNuevo" sid="6926600481209261" static="0" type="number">0</variable>
+        <variable constant="0" name="idiomaEspañol" sid="9218106151038454" static="0" type="number">0</variable>
+        <event-group description="" sid="787951953612099" title="codigoMenu">
+            <sub-events>
+                <event-block sid="4331989097545299">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1874633192731891" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="942396267281014">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8645576634057473" type="System">
+                                    <param id="0" name="Variable">idiomaEspañol</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="1791227416897596" type="idioma">
+                                    <param id="0" name="Instance variable">español</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5997208683254944">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5803074463188798" type="System">
+                                    <param id="0" name="Variable">idiomaEspañol</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2227260980634548" type="idioma">
+                                    <param id="0" name="Instance variable">español</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="687986158266933">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="5700247033604436" type="System">
+                            <param id="0" name="Layer">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>cuando apretamos el boton continuar, carga el ultimo save</comment>
+                        <event-block sid="156222952508011">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="6622403219143375" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">btn_continuar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-37" name="Load" sid="4814437651329312" type="System">
+                                    <param id="0" name="Slot">&quot;guardadoAntesMenu&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5773951468441917" type="Function">
+                                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>cuando apretamos el boton partida nueva, carga el escenario level 1-30 y elimina el save viejo</comment>
+                        <event-block sid="8135565544011256">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="8734815458928105" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">btn_nueva</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-21" name="Reset global variables" sid="7632378794964022" type="System" />
+                                <action id="0" name="Call function" sid="8721399207839369" type="Function">
+                                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="602375061706129" type="lvl1Control" />
+                                <action id="-9" name="Set value" sid="408664212990114" type="System">
+                                    <param id="0" name="Variable">MenuJuegoNuevo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9713203314045152" type="System">
+                                    <param id="0" name="Variable">idiomaEspañol</param>
+                                    <param id="1" name="Value">idioma.español</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="9572441097554709" type="System">
+                                    <param id="0" name="Layout">Level1-30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9546743624916324">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="8690653419390452" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">btn_controles</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="6824212712364351" type="System">
+                                    <param id="0" name="Layout">controles</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4770588180244017" type="Function">
+                                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5377734253517961">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="3648947728245263" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">idioma</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="6775256295578989" type="idioma">
+                                    <param id="0" name="Instance variable">español</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6511667112394674" type="Function">
+                                    <param id="0" name="Name">&quot;sonido&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;boton&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4830312741241594" type="System">
+                                    <param id="0" name="Variable">idiomaEspañol</param>
+                                    <param id="1" name="Value">idioma.español</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8854980258359129">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3440649129418182" type="idioma">
+                                    <param id="0" name="Instance variable">español</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="5295444271756802" type="idioma">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="5114437665183441" type="btn_continuar">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="7708115773049829" type="btn_nueva">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="3749713341914193" type="btn_controles">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3131515030483922">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="879818268365865" type="idioma">
+                                    <param id="0" name="Instance variable">español</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="6710179670581303" type="idioma">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="4975708837914237" type="btn_continuar">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="9221109009533969" type="btn_nueva">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="9241703386595479" type="btn_controles">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

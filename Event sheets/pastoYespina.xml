@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>pastoYespina</name>
+    <events>
+        <event-block sid="7338795304762255">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4805216959978681" type="personaje_30">
+                    <param id="0" name="Object">pasto</param>
+                </condition>
+                <condition id="3" inverted="1" name="Compare frame" sid="7439962983668975" type="pasto">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2143584708494602" type="Function">
+                    <param id="0" name="Name">&quot;matarPJ30&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5795596662739665">
+            <conditions>
+                <condition id="3" inverted="1" name="Compare frame" sid="3423081204181859" type="pasto">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="1210118668492984" type="pasto">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>tijerasYpala</name>
+    <events>
+        <comment>cortams las flores, mostraos animacion y vamos restando a la global de control de flores</comment>
+        <event-block any="1" sid="6043611623193161">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7983835996328915" type="tijera">
+                    <param id="0" name="Object">flor</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="3017491236276678" type="pala">
+                    <param id="0" name="Object">flor</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1117380657701878">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="5094125592879204" type="flor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="5415178272769074" type="flor">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4000999888507493" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="30958937691852" type="flor">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="6959744870882839" type="lvl2Control">
+                            <param id="0" name="Instance variable">Lvl2_zona2_cantidadDeFlores</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7599895160348566" type="Text">
+                            <param id="0" name="Text">&quot;:&quot;&amp;str(lvl2Control.Lvl2_zona2_cantidadDeFlores)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3972671630073139" type="flor" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>cuando se crea una flor, agregamos 1 a la global de control</comment>
+        <event-block sid="2966478062973295">
+            <conditions>
+                <condition id="-18" name="On created" sid="4267483528764391" type="flor" />
+                <condition id="-7" name="Compare instance variable" sid="1591924347512253" type="reloj_configuracion">
+                    <param id="0" name="Instance variable">fecha_nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2014</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9805531987950796" type="lvl2Control">
+                    <param id="0" name="Instance variable">LVL2_yaSeCargo1Vez_14</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="2591025963009595" type="lvl2Control">
+                    <param id="0" name="Instance variable">Lvl2_zona2_cantidadDeFlores</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="3912013602474185" type="Text">
+                    <param id="0" name="Text">&quot;:&quot;&amp;str(lvl2Control.Lvl2_zona2_cantidadDeFlores)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>la flor especial para, la creacion del pesticida</comment>
+        <event-block any="1" sid="7965881068300789">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8427997898549304" type="tijera">
+                    <param id="0" name="Object">florEspecial</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="4455352838854608" type="pala">
+                    <param id="0" name="Object">florEspecial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="2539731996249208" type="ingredienteFlor">
+                    <param id="0" name="Object">florEspecial</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="6176130393387979" type="ingredienteFlor">
+                    <param id="0" name="Instance variable">DragDropEnabled</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action behavior="DragDrop2" id="0" name="Set enabled" sid="4259325741518363" type="ingredienteFlor">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="505194220333442" type="ingredienteFlor">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="9339283010993276" type="ingredienteFlor">
+                    <param id="0" name="Instance variable">visible</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="9188214816419629" type="ingredienteFlor">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="6460666898149953" type="ingredienteFlor">
+                    <param id="0" name="Instance variable">colisionEnabled</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3797780739551517" type="florEspecial" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

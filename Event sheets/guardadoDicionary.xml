@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>guardadoDicionary</name>
+    <events>
+        <comment>***Guardar*** &#x0D;&#x0A;Personaje</comment>
+        <event-block sid="5814927621547">
+            <conditions>
+                <condition id="0" name="On function" sid="3672824763529196" type="Function">
+                    <param id="0" name="Name">&quot;guardarEstado&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9161331474004081">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9902218021527619" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2014</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="8424015916325909" type="Dictionary">
+                            <param id="0" name="Key">&quot;pos14X&quot;</param>
+                            <param id="1" name="Value">personaje_14.X</param>
+                        </action>
+                        <action id="0" name="Add key" sid="3604079901463349" type="Dictionary">
+                            <param id="0" name="Key">&quot;pos14Y&quot;</param>
+                            <param id="1" name="Value">personaje_14.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6848419495668623">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="8946614850739429" type="System">
+                                    <param id="0" name="Object">icono_interactivo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="9776856401705189" type="Dictionary">
+                                    <param id="0" name="Key">&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;X&quot;</param>
+                                    <param id="1" name="Value">icono_interactivo.pos_X</param>
+                                </action>
+                                <action id="0" name="Add key" sid="6734545205168091" type="Dictionary">
+                                    <param id="0" name="Key">&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;Y&quot;</param>
+                                    <param id="1" name="Value">icono_interactivo.pos_Y</param>
+                                </action>
+                                <action id="0" name="Add key" sid="9009431966405673" type="Dictionary">
+                                    <param id="0" name="Key">&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;NCasilla&quot;</param>
+                                    <param id="1" name="Value">icono_interactivo.NumeroCasilla</param>
+                                </action>
+                                <action id="0" name="Add key" sid="9013259018314233" type="Dictionary">
+                                    <param id="0" name="Key">&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;DaDEnabled&quot;</param>
+                                    <param id="1" name="Value">icono_interactivo.DragAndDropEnabled</param>
+                                </action>
+                                <action id="0" name="Add key" sid="9361049417167047" type="Dictionary">
+                                    <param id="0" name="Key">&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;Visible&quot;</param>
+                                    <param id="1" name="Value">icono_interactivo.visible</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7001734498129697">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="3361291409425897" type="System">
+                                    <param id="0" name="Object">interactivos</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="6052078758906139" type="interactivos">
+                                    <param id="0" name="Instance variable">interactivo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;si&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="7272584170144962" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;X&quot;</param>
+                                    <param id="1" name="Value">interactivos.X</param>
+                                </action>
+                                <action id="0" name="Add key" sid="5951287361719052" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;Y&quot;</param>
+                                    <param id="1" name="Value">interactivos.Y</param>
+                                </action>
+                                <action id="0" name="Add key" sid="9397618183033622" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;Visible&quot;</param>
+                                    <param id="1" name="Value">interactivos.visible</param>
+                                </action>
+                                <action id="0" name="Add key" sid="3590371942852119" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;DaDEnabled&quot;</param>
+                                    <param id="1" name="Value">interactivos.DragDropEnabled</param>
+                                </action>
+                                <action id="0" name="Add key" sid="8438033915304504" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;Colision&quot;</param>
+                                    <param id="1" name="Value">interactivos.colisionEnabled</param>
+                                </action>
+                                <action id="0" name="Add key" sid="6132109750066992" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;Interactivo&quot;</param>
+                                    <param id="1" name="Value">interactivos.interactivo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1442075526343879">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4746473300507246" type="reloj_configuracion">
+                                    <param id="0" name="Instance variable">lvl</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9094781138189255">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="519561573063196" type="System">
+                                            <param id="0" name="Object">caja</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Add key" sid="2897891917431541" type="Dictionary">
+                                            <param id="0" name="Key">&quot;caja&quot;&amp;caja.numero&amp;&quot;X&quot;</param>
+                                            <param id="1" name="Value">caja.X</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Add key" sid="5612170275971259" type="Dictionary">
+                                            <param id="0" name="Key">&quot;caja&quot;&amp;caja.numero&amp;&quot;Y&quot;</param>
+                                            <param id="1" name="Value">caja.Y</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="923835697600634" type="Dictionary">
+                                            <param id="0" name="Key">&quot;caja&quot;&amp;caja.IID&amp;&quot;X&quot;</param>
+                                            <param id="1" name="Value">caja.X</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="6266054661817786" type="Dictionary">
+                                            <param id="0" name="Key">&quot;caja&quot;&amp;caja.IID&amp;&quot;Y&quot;</param>
+                                            <param id="1" name="Value">caja.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9024688813685984">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="2396649111097613" type="System">
+                                            <param id="0" name="Object">vigadecontencion</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="9762567359293879" type="Dictionary">
+                                            <param id="0" name="Key">&quot;viga&quot;&amp;vigadecontencion.IID&amp;&quot;X&quot;</param>
+                                            <param id="1" name="Value">vigadecontencion.X</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="4165282499042124" type="Dictionary">
+                                            <param id="0" name="Key">&quot;viga&quot;&amp;vigadecontencion.IID&amp;&quot;Y&quot;</param>
+                                            <param id="1" name="Value">vigadecontencion.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4577979345372143">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6336591845666091" type="reloj_configuracion">
+                                    <param id="0" name="Instance variable">lvl</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="877812532117712">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="108995744029749" type="System">
+                                            <param id="0" name="Object">hongo</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="7716984990164027" type="Dictionary">
+                                            <param id="0" name="Key">&quot;hongo&quot;&amp;hongo.numero&amp;&quot;X&quot;</param>
+                                            <param id="1" name="Value">hongo.X</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="2776567509364002" type="Dictionary">
+                                            <param id="0" name="Key">&quot;hongo&quot;&amp;hongo.numero&amp;&quot;Y&quot;</param>
+                                            <param id="1" name="Value">hongo.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3234913491438784">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1646012387726156" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2030</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="8103432704814347" type="Dictionary">
+                            <param id="0" name="Key">&quot;pos30X&quot;</param>
+                            <param id="1" name="Value">personaje_30.X</param>
+                        </action>
+                        <action id="0" name="Add key" sid="7495970876075193" type="Dictionary">
+                            <param id="0" name="Key">&quot;pos30Y&quot;</param>
+                            <param id="1" name="Value">personaje_30.y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>************************* CARGAR  *****************************************</comment>
+        <comment>INTERACTIVOS&#x0D;&#x0A;carga la informacion para los objetos, al cargar el escenario y les setea sus variables</comment>
+        <event-block sid="8278492754622777">
+            <conditions>
+                <condition id="0" name="On function" sid="3975534060084737" type="Function">
+                    <param id="0" name="Name">&quot;cargarEstado&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="653627195274564">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1865028058321733" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2014</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="8551263064774041" type="personaje_14">
+                            <param id="0" name="X">int(Dictionary.Get(&quot;pos14X&quot;))</param>
+                            <param id="1" name="Y">int(Dictionary.Get(&quot;pos14Y&quot;))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>ICONOS INTERACTIVOS&#x0D;&#x0A;</comment>
+                        <event-block collapsed="1" sid="690933097876845">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="8728230238819462" type="System">
+                                    <param id="0" name="Object">icono_interactivo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="4078630491228009" type="icono_interactivo">
+                                    <param id="0" name="X">int(Dictionary.Get(&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;X&quot;))</param>
+                                    <param id="1" name="Y">int(Dictionary.Get(&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;Y&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6951534610356197" type="icono_interactivo">
+                                    <param id="0" name="Instance variable">NumeroCasilla</param>
+                                    <param id="1" name="Value">int(Dictionary.Get(&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;NCasilla&quot;))</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="3293239195627253" type="icono_interactivo" />
+                                <action id="-10" name="Set value" sid="728031135330962" type="icono_interactivo">
+                                    <param id="0" name="Instance variable">pos_X</param>
+                                    <param id="1" name="Value">int(Dictionary.Get(&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;X&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8784889562153147" type="icono_interactivo">
+                                    <param id="0" name="Instance variable">pos_Y</param>
+                                    <param id="1" name="Value">int(Dictionary.Get(&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;Y&quot;))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Es visible?</comment>
+                                <event-block sid="3325349072324371">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="6954382050238859" type="Dictionary">
+                                            <param id="0" name="Key">&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;Visible&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;si&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="5660768507572709" type="icono_interactivo">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2257700737772895" type="icono_interactivo">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9643098996075803">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1229601400549629" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="4587327501990987" type="icono_interactivo">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7702009453618716" type="icono_interactivo">
+                                            <param id="0" name="Instance variable">visible</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>esta activado el dragAndDrop</comment>
+                                <event-block sid="1333299202968757">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="1760077253527309" type="Dictionary">
+                                            <param id="0" name="Key">&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;DaDEnabled&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;si&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="8908560732255412" type="icono_interactivo">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5847537479066356" type="icono_interactivo">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;si&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="515070341139485">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2739019000497786" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="DragDrop2" id="0" name="Set enabled" sid="5997195169554042" type="icono_interactivo">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4166393065031177" type="icono_interactivo">
+                                            <param id="0" name="Instance variable">DragAndDropEnabled</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3397753312556033">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="184221560932588" type="casillaInventario">
+                                            <param id="0" name="Instance variable">casilla</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">int(Dictionary.Get(&quot;icono&quot;&amp;icono_interactivo.nombreObjeto&amp;&quot;NCasilla&quot;))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-29" name="Move to object" sid="4132048772310305" type="icono_interactivo">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">casillaInventario</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9656398052139785">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2927024233140652" type="reloj_configuracion">
+                            <param id="0" name="Instance variable">fecha_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2030</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="4289120600184642" type="personaje_30">
+                            <param id="0" name="X">int(Dictionary.Get(&quot;pos30X&quot;))</param>
+                            <param id="1" name="Y">int(Dictionary.Get(&quot;pos30Y&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3289325898222079">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="1148946874153761" type="System">
+                            <param id="0" name="Object">interactivos</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7698073305884998" type="interactivos">
+                            <param id="0" name="Instance variable">interactivo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="3331772067723636" type="interactivos">
+                            <param id="0" name="X">int(Dictionary.Get(interactivos.nombreObjeto&amp;&quot;X&quot;))</param>
+                            <param id="1" name="Y">int(Dictionary.Get(interactivos.nombreObjeto&amp;&quot;Y&quot;))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9451429805719907" type="interactivos">
+                            <param id="0" name="Instance variable">interactivo</param>
+                            <param id="1" name="Value">Dictionary.Get(interactivos.nombreObjeto&amp;&quot;Interactivo&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-29" name="Move to object" sid="1649791405063281" type="interactivos">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">personaje_14</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Es visible?</comment>
+                        <event-block sid="48907817011189">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="4683428914441669" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;Visible&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;si&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="5218354697520099" type="interactivos">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2220088970314371" type="interactivos">
+                                    <param id="0" name="Instance variable">visible</param>
+                                    <param id="1" name="Value">&quot;si&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6223943289014198">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6083768068496371" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="749963196826468" type="interactivos">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7022384382640352" type="interactivos">
+                                    <param id="0" name="Instance variable">visible</param>
+                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>esta activado el dragAndDrop</comment>
+                        <event-block sid="6128542826239309">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="4569663486297468" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;DaDEnabled&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;si&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop2" id="0" name="Set enabled" sid="9932530962522414" type="interactivos">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4900561095678262" type="interactivos">
+                                    <param id="0" name="Instance variable">DragDropEnabled</param>
+                                    <param id="1" name="Value">&quot;si&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3079534131548619">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9924455704910265" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop2" id="0" name="Set enabled" sid="5580384565404942" type="interactivos">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2976950961112732" type="interactivos">
+                                    <param id="0" name="Instance variable">DragDropEnabled</param>
+                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>puede colisionar</comment>
+                        <event-block sid="7112020388326289">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="1925139896362625" type="Dictionary">
+                                    <param id="0" name="Key">interactivos.nombreObjeto&amp;&quot;Colision&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;si&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="2666446977647288" type="interactivos">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9403110150626874" type="interactivos">
+                                    <param id="0" name="Instance variable">colisionEnabled</param>
+                                    <param id="1" name="Value">&quot;si&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="468295768121197">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7581929069066251" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="1966001450966265" type="interactivos">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5682012190224288" type="interactivos">
+                                    <param id="0" name="Instance variable">colisionEnabled</param>
+                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5216520033145515">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="5535649593749682" type="System">
+                            <param id="0" name="Object">caja</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-3" name="Set position" sid="9026526421296709" type="caja">
+                            <param id="0" name="X">int(Dictionary.Get(&quot;caja&quot;&amp;caja.numero&amp;&quot;X&quot;))</param>
+                            <param id="1" name="Y">int(Dictionary.Get(&quot;caja&quot;&amp;caja.numero&amp;&quot;Y&quot;))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="132843743139471" type="caja">
+                            <param id="0" name="X">int(Dictionary.Get(&quot;caja&quot;&amp;caja.IID&amp;&quot;X&quot;))</param>
+                            <param id="1" name="Y">int(Dictionary.Get(&quot;caja&quot;&amp;caja.IID&amp;&quot;Y&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9874680532980933">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="6612938075241327" type="System">
+                            <param id="0" name="Object">hongo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="93141006979222" type="hongo">
+                            <param id="0" name="X">int(Dictionary.Get(&quot;hongo&quot;&amp;hongo.numero&amp;&quot;X&quot;))</param>
+                            <param id="1" name="Y">int(Dictionary.Get(&quot;hongo&quot;&amp;hongo.numero&amp;&quot;Y&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6439945681880659">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="7206323561414503" type="System">
+                            <param id="0" name="Object">vigadecontencion</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="5186981839283715" type="vigadecontencion">
+                            <param id="0" name="X">int(Dictionary.Get(&quot;viga&quot;&amp;vigadecontencion.IID&amp;&quot;X&quot;))</param>
+                            <param id="1" name="Y">int(Dictionary.Get(&quot;viga&quot;&amp;vigadecontencion.IID&amp;&quot;Y&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
